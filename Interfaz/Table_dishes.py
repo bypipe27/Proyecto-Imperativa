@@ -86,23 +86,8 @@ boton_eliminar.place(x=500, y=100)
 boton_actualizar = Button(table_mane_dish, text="Update", command=update_row)
 boton_actualizar.place(x=500, y=150) 
 
-#Load the data from the file
-try:
-    with open('./Data/Dish.json', 'r') as f:
-        tables = {record['Table']: record for record in (json.loads(line) for line in f)}
-except (FileNotFoundError, json.JSONDecodeError):
-    tables = {}
 
-#Add the data to the table
-for key, record in tables.items():
-    if isinstance(record, dict):
-        coltab.insert(
-            "", 
-            'end', 
-            values=(record.get('Table'), 
-                    record.get('Date'), 
-                    record.get('Hour'), 
-                    record.get('# People'))
-                    )
+
+
 
 table_mane_dish.mainloop()

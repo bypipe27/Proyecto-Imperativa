@@ -1,17 +1,17 @@
 """
 Felipe Ortiz Calan - 2380642
-"""
+Samuel Valdes Gomez - 2380346"""
 
 #Importamos librerias
 
 from tkinter import *
 import subprocess 
-
+#-----------------------------------------------------------------
 # Funcion para abrir la ventana de login 
 
 def open_login():
     windowscero.destroy()   #Close the windows_cero 
-    subprocess.call(["python", "Interfaz\login.py"]) #Open the windows_login 
+    subprocess.call(["python", "Interfaz\Login.py"]) #Open the windows_login 
 
 def open_register():
     windowscero.destroy()   #Close the windows_cero 

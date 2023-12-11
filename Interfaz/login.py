@@ -22,21 +22,25 @@ def verify_email_login():
     if email2 == "" or password2 == "":
         messagebox.showerror("Error", "Email and password is required")
         return 
-    with open('password.txt', 'r') as f: 
+    with open('Data\password.txt', 'r') as f: 
         if passwordcrypt not in f.read():
             messagebox.showinfo("Error", "User not registereeed")
             return 
-    with open('register_inicio.txt', 'r') as f:
+    with open('Data\Register_inicio.txt', 'r') as f:
                 for line in f:
                     email1, password1 = line.strip().split(',')
                     if email1 == email2 and password1 == password2:
                         messagebox.showinfo("Success", "User logged in")
                         windowslogin.destroy()
-                        subprocess.call(["python", "menu.py"])
+                        subprocess.call(["Interfaz\menu.py"])
                         return 
                 messagebox.showerror("Error", "Email and passssword incorrect")
         
-                
+#---------------------------------------------------------------
+# funcion para ir al registro 
+def register():
+    windowslogin.destroy()
+    subprocess.call(["python", "Interfaz\Register.py"])                 
 
        
 #----------------------------------------------------------------
@@ -64,11 +68,20 @@ loginlabelpassword.place(x = 40 , y = 305)
 # Configuramos entrada de password y email en el login 
 loginentryuser = Entry(windowslogin, width = 26, font = ("arial", 16 ))
 loginentryuser.place(x = 200 , y = 250)
-loginentrypassword = Entry(windowslogin, width = 26,  font = ("arial", 16))
+loginentrypassword = Entry(windowslogin, width = 26,  font = ("arial", 16), show="•")
 loginentrypassword.place(x = 200, y = 310)
 #----------------------------------------------------------------
 # Configure button de login en el login y ubicamos 
-buttonloginsession = Button(windowslogin, width = 20, text = "Iniciar sesión",  font = ("arial", 14),fg = "white",bg = "black", relief = "solid", command= verify_email_login)
+buttonloginsession = Button(windowslogin, width = 15, text = "Login",  font = ("arial", 14),fg = "white",bg = "black", relief = "solid", command= verify_email_login)
 buttonloginsession.place(x = 280, y = 360)
+#Label para ir al registro
+loginlabelregister = Label(windowslogin, text = "¿You don't have an account?", font = ("Arial", 12), bg = "white")
+loginlabelregister.place(x = 55, y = 415) 
+#----------------------------------------------------------------
+# Configure button de register en el login y ubicamos
+buttonregister = Button(windowslogin, width = 15, text = "Sign up",  font = ("arial", 14),fg = "white",bg = "black", relief = "solid", command = register)
+buttonregister.place(x = 280, y = 410)
+#----------------------------------------------------------------
+
 
 windowslogin.mainloop()

@@ -36,7 +36,7 @@ def verify_email():
                                                                                           
         messagebox.showinfo("Success", "User registered") 
         windowsregister.destroy()                               # Cerramos la ventana de register y abrimos la de login
-        subprocess.call(["python", "login.py"]) 
+        subprocess.call(["python", "Login.py"]) 
 
 #---------------------------------------
 # Bandera italiana con labels en ventana de inciciar sesion (Configuracion y ubicacion) 

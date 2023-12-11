@@ -1,7 +1,23 @@
 #Importamos las librerias necesarias para el funcionamiento del programa 
 from tkinter import *
+from tkinter import messagebox
+import subprocess 
 #Funciones para abrir las ventanas de menu dish , login y menu
+def open_dish():
+    windowsmenu.withdraw()
+    subprocess.call(["python", "Interfaz/Menu_dish.py"])
+    
+def open_table():
+    windowsmenu.withdraw()
+    subprocess.call(["python", "Interfaz/Menu_Table.py"])
 
+def open_delivery():
+    windowsmenu.withdraw()
+    subprocess.call(["python", "Interfaz/Menu_order.py"])
+
+def close_program():
+    windowsmenu.destroy()
+    subprocess.call(["python", "Interfaz/windows_0.py"])
 
 #windowsmenu despues de iniciar sesion 
 windowsmenu = Tk()
@@ -25,7 +41,13 @@ optionsmenusubtitle = Label(windowsmenu, text = "Welcome", font = ("Arial", 20, 
 optionsmenusubtitle.place(x = 240, y = 190 )
 #----------------------------------------------------------------
 #butonns del menu configuracion and postions 
-optionsbutondish = Button(windowsmenu, text = "Dish management", font = ("arial", 12), relief = "raised",command = open_dish)
+optionsbutondish = Button(
+    windowsmenu, 
+    text="Dish management", 
+    font=("arial", 12), 
+    relief="raised",
+    command=open_dish
+)
 optionsbutondish.place(x = 242, y = 240 )
 optionsbutontable = Button(windowsmenu, text = "Table management", font = ("arial", 12), relief = "raised", command= open_table) 
 optionsbutontable.place(x = 240, y = 300 )
