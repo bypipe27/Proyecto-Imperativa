@@ -8,7 +8,7 @@ windowsregister = Tk()
 windowsregister.title ("Register")
 windowsregister.resizable(width = False, height = False)
 windowsregister.geometry("600x500")
-windowsregister.configure(bg = "white")
+windowsregister.configure(bg = "#FFFFFF")
 #---------------------------------------
 #Funcion para verficar el correo
 def verify_email():
@@ -40,29 +40,29 @@ def verify_email():
 
 #---------------------------------------
 # Bandera italiana con labels en ventana de inciciar sesion (Configuracion y ubicacion) 
-redflag = Label(windowsregister,bg = "green" ,height = 5 , width = 20)
-whiteflag=  Label(windowsregister,bg = "white", height = 5 , width = 21)
-greenflag = Label(windowsregister,bg = "red", height = 5 , width = 20)
-redflag.place( x = 70, y = 100)
+greenflag = Label(windowsregister,bg = "#009C45" ,height = 5 , width = 20)
+whiteflag=  Label(windowsregister,bg = "#FFFFFF", height = 5 , width = 21)
+redflag = Label(windowsregister,bg = "#B31200", height = 5 , width = 20)
+greenflag.place( x = 70, y = 100)
 whiteflag.place( x = 217, y = 100)
-greenflag.place( x = 370, y = 100)
+redflag.place( x = 370, y = 100)
 #----------------------------------------------------------------
 # title  (Configuracion y ubicacion) en ventana de register
 
-registertitle = Label(windowsregister, text = "Italian Restaurant",font = ("Arial", 40 , "bold"), bg = "silver", fg = "red",relief = "raised")
+registertitle = Label(windowsregister, text = "Italian Restaurant",font = ("Arial", 40 , "bold"), bg = "#AAAAAA", fg = "red",relief = "raised")
 registertitle.place(x = 70 , y = 20)
 
-registersubtitle = Label(windowsregister,text = "Register", font = ("Arial", 29 , "bold"), bg ="white") 
+registersubtitle = Label(windowsregister,text = "Register", font = ("Arial", 29 , "bold"), bg ="#FFFFFF") 
 registersubtitle.place(x = 120, y = 190)
 #----------------------------------------------------------------
 # labels para email, password, confirm password
-registeremailabel = Label(windowsregister, text = "Email: ", font = ("arial", 12, "bold"), bg ="white" )
+registeremailabel = Label(windowsregister, text = "Email: ", font = ("arial", 12, "bold"), bg ="#FFFFFF" )
 registeremailabel.place(x = 100, y = 260)
 
-registerpasswordlabel = Label(windowsregister, text = "Password: ", font = ("arial", 12, " bold"),bg = "white")
+registerpasswordlabel = Label(windowsregister, text = "Password: ", font = ("arial", 12, " bold"),bg = "#FFFFFF")
 registerpasswordlabel.place(x = 100, y = 320)
                         
-registerconfirmlabel = Label(windowsregister, text = "Confirm Password: ", font = ("arial", 12, "bold"), bg = "white")
+registerconfirmlabel = Label(windowsregister, text = "Confirm Password: ", font = ("arial", 12, "bold"), bg = "#FFFFFF")
 registerconfirmlabel.place(x = 100, y = 370)
 #----------------------------------------------------------------
 # entrys for email , password , confirm password
