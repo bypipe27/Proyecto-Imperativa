@@ -1,3 +1,12 @@
+"""
+Felipe Ortiz Calan - 2380642
+Samuel Valdes Gomez - 2380346
+Santiago Velasquez Bedoya  - 2380378
+
+Proyecto final - Fundamentos de programacion Imperativa 
+Grupo - 52 
+Docente: Luis German Toro
+"""
 #-----------------------------------------------------------------------------
 #importamos librerias 
 from tkinter import * 
@@ -56,7 +65,7 @@ def add_dish_to_table():
         messagebox.showerror("Error", "Invalid time. Please enter the time in the format 'HH:MM'")
         entry_table_hour.delete(0, 'end')
         validate = False       
-    elif validate == True:                                                                  #Save dish data to a JSON file
+    elif validate == True:                                                                  #Save table data to a JSON file
         with open('Data\Table.json', 'a') as f:
             table_data = {'Table': table, 'Date': date, 'Hour': hour, 'N.person': number}
             json.dump(table_data, f)
@@ -84,8 +93,8 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #---------------------------------------------------------------
 # title and text description (Configuracion y ubicacion)
-manegementtitle = Label(wmanege_table, text = "Italian Restaurant", font = ("Arial", 40 , "bold"), bg = "#AAAAAA", fg = "#B31200", relief = "raised")
-manegementtitle.place(x = 70 , y = 20) 
+manegement_title = Label(wmanege_table, text = "Italian Restaurant", font = ("Arial", 40 , "bold"), bg = "#AAAAAA", fg = "#B31200", relief = "raised")
+manegement_title.place(x = 70 , y = 20) 
 #---------------------------------------------------------------
 # label and entry of number the table (Configuracion y ubicacion)
 table_table_label = Label(wmanege_table, text = "# Table", font = ("Arial", 12), bg = "#FFFFFF")

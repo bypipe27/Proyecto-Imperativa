@@ -1,3 +1,12 @@
+"""
+Felipe Ortiz Calan - 2380642
+Samuel Valdes Gomez - 2380346
+Santiago Velasquez Bedoya  - 2380378
+
+Proyecto final - Fundamentos de programacion Imperativa 
+Grupo - 52 
+Docente: Luis German Toro
+"""
 # Importamos las librerias necesarias 
 from tkinter import *
 from tkinter import messagebox
@@ -26,18 +35,33 @@ redflag = Label(wmenu_order,bg = "#B31200", height = 5 , width = 20)
 greenflag.place( x = 70, y = 100)
 whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
+# ----------------------------------------------------------------
+# tittle and subtitles en el order_menu
+menu_order_title = Label(wmenu_order, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
+menu_order_title.place(x = 100 , y = 10)
+menu_order_subtitle = Label(wmenu_order, text = "Manegeiment order", font = ("Arial", 20, "bold" ))
+menu_order_subtitle.place(x = 185, y = 190)
 # ---------------------------------------------------------------
-# tittle and subtitles en el dishmenu
-menudishtitle = Label(wmenu_order, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
-menudishtitle.place(x = 100 , y = 10)
-menudishsubtitle = Label(wmenu_order, text = "Manegeiment order", font = ("Arial", 20, "bold" ))
-menudishsubtitle.place(x = 185, y = 190)
-# ---------------------------------------------------------------
-#butoons add , decla , update of dish 
-buttonadddish = Button(wmenu_order,text = "Añadir order", font = ("Arial", 12, "bold"), fg = "#FFFFFF", bg = "#000000", command = open_manegeorder)
-buttonadddish.place(x = 250, y = 260 )
-buttondecladish = Button(wmenu_order, text = "Eliminar order", font = ("Arial", 12, "bold"), fg = "#FFFFFF", bg = "#000000",command= open_tableorder)
-buttondecladish.place(x = 245 , y = 330 )
-buttonupdatedish = Button(wmenu_order, text = "Actualizar order", font = ("Arial", 12, "bold"), fg = "#FFFFFF", bg = "#000000" ,command= open_tableorder)
-buttonupdatedish.place(x = 240, y = 390 )
+#butoons add , decla , update of order
+button_add_order = Button(wmenu_order,
+                          text = "Ordenar", 
+                          font = ("Arial", 12, "bold"), 
+                          fg = "#FFFFFF", bg = "#000000", 
+                          command = open_manegeorder)
+button_add_order.place(x = 250, y = 260 )
+#---------------------------------------------------------------
+button_decla_order = Button(wmenu_order, 
+                            text = "Eliminar order", 
+                            font = ("Arial", 12, "bold"),
+                            fg = "#FFFFFF",
+                            bg = "#000000",
+                            command= open_tableorder)
+button_decla_order.place(x = 245 , y = 330 )
+button_update_order = Button(wmenu_order,
+                            text = "Actualizar order",
+                            font = ("Arial", 12, "bold"), 
+                            fg = "#FFFFFF", 
+                            bg = "#000000",
+                            command= open_tableorder)
+button_update_order.place(x = 240, y = 390 )
 wmenu_order.mainloop()

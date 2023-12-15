@@ -3,10 +3,11 @@ from tkinter import *
 from tkinter import messagebox
 import subprocess
 #Funciones 
-def open_manegedish():
+def open_manedish():
     wmenu_dish.withdraw()
-    subprocess.call(["python", "Interfaz\Manegeiment_dish.py"])
+    subprocess.call(["python", "Interfaz\Manegeiment_dish.py"]) 
 
+    
 def open_tabledish():
     wmenu_dish.withdraw()
     subprocess.call(["python", "Interfaz\Table_dishes.py"])
@@ -28,17 +29,33 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #----------------------------------------------------------------
 # tittle and subtitles en el dishmenu
-menudishtitle = Label(wmenu_dish, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
-menudishtitle.place(x = 100 , y = 10)
-menudishsubtitle = Label(wmenu_dish, text = "Manegeiment dish", font = ("Arial", 20, "bold" ))
-menudishsubtitle.place(x = 185, y = 190)
+menu_dish_title = Label(wmenu_dish, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
+menu_dish_title.place(x = 100 , y = 10)
+menu_dish_subtitle = Label(wmenu_dish, text = "Manegeiment dish", font = ("Arial", 20, "bold" ))
+menu_dish_subtitle.place(x = 185, y = 190)
 #----------------------------------------------------------------
 #butoons add , decla , update of dish 
-buttonadddish = Button(wmenu_dish,text = "Añadir plato", font = ("Arial", 12, "bold"), fg = "#FFFFFF", bg = "#000000", command = open_manegedish)
-buttonadddish.place(x = 250, y = 260 )
-buttondecladish = Button(wmenu_dish, text = "Eliminar plato", font = ("Arial", 12, "bold"), fg = "#FFFFFF", bg = "#000000",command= open_tabledish)
-buttondecladish.place(x = 245 , y = 330 )
-buttonupdatedish = Button(wmenu_dish, text = "Actualizar plato", font = ("Arial", 12, "bold"), fg = "#FFFFFF", bg = "#000000" ,command= open_tabledish)
-buttonupdatedish.place(x = 240, y = 390 )
-
+button_add_dish = Button(wmenu_dish,
+                       text = "Añadir plato", 
+                       font = ("Arial", 12, "bold"), 
+                       fg = "#FFFFFF", 
+                       bg = "#000000", 
+                       command = open_manedish) 
+button_add_dish.place(x = 250, y = 260 )
+#----------------------------------------------------------------
+button_decla_dish = Button(wmenu_dish, 
+                         text = "Eliminar plato", 
+                         font = ("Arial", 12, "bold"), 
+                         fg = "#FFFFFF", bg = "#000000",
+                         command= open_tabledish)
+button_decla_dish.place(x = 245 , y = 330 )
+#----------------------------------------------------------------
+button_update_dish = Button(wmenu_dish, 
+                          text = "Actualizar plato", 
+                          font = ("Arial", 12, "bold"), 
+                          fg = "#FFFFFF", bg = "#000000" ,
+                          command= open_tabledish)
+button_update_dish.place(x = 240, y = 390 )
+#----------------------------------------------------------------
+#mainloop
 wmenu_dish.mainloop()

@@ -33,6 +33,7 @@ def add_dish_to_table():
     if  not description.isalpha():
         messagebox.showerror("Error", "Description should only contain letterrs.")
         entry_dish_description.delete(0, 'end')
+        validate = False 
     if not disponibility:
         messagebox.showerror("Error", "Selected a option")
         validate = False

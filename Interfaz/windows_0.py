@@ -1,24 +1,27 @@
 """
 Felipe Ortiz Calan - 2380642
-Samuel Valdes Gomez - 2380346"""
+Samuel Valdes Gomez - 2380346
+Santiago Velasquez Bedoya  - 2380378
 
+Proyecto final - Fundamentos de programacion Imperativa 
+Grupo - 52 
+Docente: Luis German Toro
+"""
+#-----------------------------------------------------------------
 #Importamos librerias
-
-from tkinter import *
+from tkinter import * 
 import subprocess 
 #-----------------------------------------------------------------
 # Funcion para abrir la ventana de login 
-
 def open_login():
-    windowscero.destroy()   #Close the windows_cero 
-    subprocess.call(["python", "Interfaz\Login.py"]) #Open the windows_login 
+    windowscero.destroy()   # Destroy the windows_cero (Destruir el windows_cero)
+    subprocess.call(["python", "Interfaz\Login.py"]) # Open the script windows_login (Abrir el script ventana_inicio_sesion)
 
 def open_register():
-    windowscero.destroy()   #Close the windows_cero 
-    subprocess.call(["python", "Interfaz\Register.py"]) #Open the windows_register 
-
+    windowscero.destroy()   # Destroy the windows_cero (Destruir el windows_cero) 
+    subprocess.call(["python", "Interfaz\Register.py"]) #Open the script windows_register (Abrir el script ventana_registrarse)
 #----------------------------------------------------------------
-# Definimos la ventana principal y configuramos
+# Definimos la ventana principal y configuramos (Define the main window and configure)
 windowscero = Tk()
 windowscero.title("Italian Restaurant")
 windowscero.resizable(width = False, height = False)
@@ -34,8 +37,13 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #----------------------------------------------------------------
 # title and text description (Configuracion y ubicacion)
-cerotitle = Label(windowscero, text = "Italian Restaurant", font = ("Arial", 40 , "bold"), bg = "#AAAAAA", fg = "red", relief = "raised")
-cerotext =  Label(windowscero,
+cero_title = Label(windowscero, 
+                  text = "Italian Restaurant", 
+                  font = ("Arial", 40 , "bold"), 
+                  bg = "#AAAAAA", fg = "red", 
+                  relief = "raised"
+                  )
+cero_text =  Label(windowscero,
                 text = (
 "Enjoy authentic Italian flavors in our cozy restaurant." 
 " From classic pastas to artisanal pizzas,"
@@ -45,17 +53,28 @@ cerotext =  Label(windowscero,
                 bg = "#FFFFFF",
                 justify = "left",
                 wraplength = 452)
-
-cerotitle.place(x = 70 , y = 20)
-cerotext.place(x = 70 , y = 200)
+# Ubicacion de los labels 
+cero_title.place(x = 70 , y = 20)
+cero_text.place(x = 70 , y = 200)
 #----------------------------------------------------------------
 # button register and button login ( Configure buttons and ubications )
-cerologinbutton = Button(windowscero, text = "Iniciar sesion", font = ("arial", 12), bg = "#AAAAAA", fg = "#FFFFFF", command = open_login)
-ceroregisterbutton = Button(windowscero, text = "register account", font = ("arial", 12), bg = "#AAAAAA", fg = "#FFFFFF", command = open_register)
+cero_login_button = Button(windowscero, 
+                         text = "Login", 
+                         font = ("arial", 12), 
+                         bg = "#AAAAAA", 
+                         fg = "#FFFFFF", 
+                         command = open_login)
+cero_login_button.place(x = 250, y = 300 )
 
-cerologinbutton.place(x = 250, y = 300 )
-ceroregisterbutton.place(x = 240 , y = 350 )
-
+cero_register_button = Button(windowscero, 
+                            text = "register account", 
+                            font = ("arial", 12), 
+                            bg = "#AAAAAA", 
+                            fg = "#FFFFFF", 
+                            command = open_register)
+cero_register_button.place(x = 240 , y = 350 )
+#----------------------------------------------------------------
+# mainloop the windows 
 windowscero.mainloop() 
 
 

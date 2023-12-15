@@ -1,8 +1,3 @@
-[
-    {"Table": "3", "Date": "", "Hour": "", "N.person": ""},
-    {"Table": "5", "Date": "2023/09/10", "Hour": "22:09", "N.person": "1"},
-    {"Table": "5", "Date": "2024/09/12", "Hour": "22:01", "N.person": "4"},
-    {"Table": "2", "Date": "2024/09/10", "Hour": "21:09", "N.person": "3"},
-    {"Table": "2", "Date": "2024/07/09", "Hour": "12:09", "N.person": "3"},
-    {"Table": "6", "Date": "2024/07/09", "Hour": "12:09", "N.person": "2"}
-]
+{"Table": "3", "Date": "", "Hour": "", "N.person": ""}
+{"Table": "3", "Date": "2024/09/12", "Hour": "12:09", "N.person": "4"}
+{"Table": "2", "Date": "2024/07/09", "Hour": "20:09", "N.person": "2"}

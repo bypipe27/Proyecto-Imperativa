@@ -1,20 +1,27 @@
+"""
+Felipe Ortiz Calan - 2380642
+Samuel Valdes Gomez - 2380346
+Santiago Velasquez Bedoya  - 2380378
 
+Proyecto final - Fundamentos de programacion Imperativa 
+Grupo - 52 
+Docente: Luis German Toro
+"""
+#---------------------------------------------------------------
 #Importamos librerias 
 from tkinter import *
 from tkinter import messagebox 
 import subprocess
 import hashlib
-
+#---------------------------------------------------------------
 # Creamos y configuramos ventana para iniciar sesion 
 windowslogin = Tk()
 windowslogin.title("Login")
 windowslogin.resizable(width = False, height = False)
 windowslogin.geometry("600x500")
 windowslogin.configure(bg = "#FFFFFF")
-
 #---------------------------------------------------------------
 # Funcion para verificar el correo y la contraseña 
-
 def verify_email_login():
     email2 = loginentryuser.get()
     password2 = loginentrypassword.get() 
@@ -35,14 +42,13 @@ def verify_email_login():
                         subprocess.call(["Interfaz\menu.py"])
                         return 
                 messagebox.showerror("Error", "Email and passssword incorrect")
-        
+
 #---------------------------------------------------------------
-# funcion para ir al registro 
+                
+# funcion para ir al registro                
 def register():
     windowslogin.destroy()
     subprocess.call(["python", "Interfaz\Register.py"])                 
-
-       
 #----------------------------------------------------------------
 # Bandera italiana con labels en ventana de inciciar sesion (Configuracion y ubicacion) 
 greenflag = Label(windowslogin,bg = "#009C45" ,height = 5 , width = 20)
@@ -53,15 +59,30 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #----------------------------------------------------------------
 # title  (Configuracion y ubicacion) en ventana de login 
-logintitle = Label(windowslogin, text = "Italian Restaurant", font = ("Arial", 40 , "bold"), bg = "#AAAAAA", fg = "#B31200" , relief = "raised")
+logintitle = Label(windowslogin, 
+                   text = "Italian Restaurant", 
+                   font = ("Arial", 40 , "bold"), 
+                   bg = "#AAAAAA", fg = "#B31200", 
+                   relief = "raised")
 logintitle.place(x = 70 , y = 20)
-loginsubtitle = Label(windowslogin,text = "Login", font = ("Arial", 29 , "bold"), bg = "#FFFFFF") 
+#----------------------------------------------------------------
+loginsubtitle = Label(windowslogin,
+                      text = "Login", 
+                      font = ("Arial", 29 , "bold"), 
+                      bg = "#FFFFFF") 
 loginsubtitle.place(x = 160, y = 190)
 #----------------------------------------------------------------
 #configuramos las etiquetas para el login 
-loginlabelemail = Label(windowslogin, text = "Email: ", font = ("Arial", 20 , "bold"), bg = "#FFFFFF")
+loginlabelemail = Label(windowslogin, 
+                        text = "Email: ", 
+                        font = ("Arial", 20 , "bold"), 
+                        bg = "#FFFFFF")
 loginlabelemail.place(x = 40 , y = 245)
-loginlabelpassword = Label(windowslogin,  text = "Password: ", font = ("Arial", 20 , "bold"), bg = "#FFFFFF")
+#----------------------------------------------------------------
+loginlabelpassword = Label(windowslogin,  
+                           text = "Password: ", 
+                           font = ("Arial", 20 , "bold"), 
+                           bg = "#FFFFFF")
 loginlabelpassword.place(x = 40 , y = 305)
 #----------------------------------------------------------------
 # Configuramos entrada de password y email en el login 
@@ -71,16 +92,30 @@ loginentrypassword = Entry(windowslogin, width = 26,  font = ("arial", 16), show
 loginentrypassword.place(x = 200, y = 310)
 #----------------------------------------------------------------
 # Configure button de login en el login y ubicamos 
-buttonloginsession = Button(windowslogin, width = 15, text = "Login",  font = ("arial", 14),fg = "#FFFFFF",bg = "#000000", relief = "solid", command= verify_email_login)
+buttonloginsession = Button(windowslogin, width = 15, 
+                            text = "Login",  
+                            font = ("arial", 14),
+                            fg = "#FFFFFF",
+                            bg = "#000000", 
+                            relief = "solid", 
+                            command= verify_email_login)
 buttonloginsession.place(x = 280, y = 360)
-#Label para ir al registro
-loginlabelregister = Label(windowslogin, text = "¿You don't have an account?", font = ("Arial", 12), bg = "#FFFFFF")
+#----------------------------------------------------------------
+#Label del  registro
+loginlabelregister = Label(windowslogin, 
+                           text = "¿You don't have an account?", 
+                           font = ("Arial", 12), 
+                           bg = "#FFFFFF")
 loginlabelregister.place(x = 55, y = 415) 
 #----------------------------------------------------------------
 # Configure button de register en el login y ubicamos
-buttonregister = Button(windowslogin, width = 15, text = "Sign up",  font = ("arial", 14),fg = "#FFFFFF",bg = "#000000", relief = "solid", command = register)
+buttonregister = Button(windowslogin, width = 15, 
+                        text = "Sign up",  
+                        font = ("arial", 14),
+                        fg = "#FFFFFF",bg = "#000000", 
+                        relief = "solid", 
+                        command = register)
 buttonregister.place(x = 280, y = 410)
 #----------------------------------------------------------------
-
-
+# mainloop
 windowslogin.mainloop()
