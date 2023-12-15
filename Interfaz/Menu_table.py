@@ -62,10 +62,11 @@ button_add_table = Button(
     text = "Add Table", 
     font = ("Arial", 12, "bold"), 
     fg = "#FFFFFF", 
-    bg = "#29A873", 
+    bg = "#29A873",
+    width=12,  
     command = open_manegetable
 )
-button_add_table.place(x=250, y=260)
+button_add_table.place(x=240, y=260)
 #---------------------------------------------------------------
 button_decla_table = Button(
     wmenu_table, 
@@ -73,9 +74,10 @@ button_decla_table = Button(
     font=("Arial", 12, "bold"), 
     fg="#FFFFFF", 
     bg="#DE0A0D",
+    width= 12,
     command=open_tabletable
 )
-button_decla_table.place(x = 240 , y = 330 )
+button_decla_table.place(x=240, y=330)
 #---------------------------------------------------------------
 button_update_table = Button(
     wmenu_table, 
@@ -83,8 +85,9 @@ button_update_table = Button(
     font = ("Arial", 12, "bold"), 
     fg = "#FFFFFF", 
     bg = "#3B7CC2",
+    width= 12,
     command= open_tabletable
 )
-button_update_table.place(x = 237, y = 390 )
+button_update_table.place(x=240, y=390)
 #--------------------------------------------------------------- 
 wmenu_table.mainloop()

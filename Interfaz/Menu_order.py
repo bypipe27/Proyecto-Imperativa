@@ -26,7 +26,7 @@ wmenu_order = Tk()
 wmenu_order.title("Order")
 wmenu_order.resizable(width=False, height=False)
 wmenu_order.geometry("600x500")
-wmenu_order.configure(bg="#FFFFFF")
+wmenu_order.configure(bg="#D6D6D6")
 # ---------------------------------------------------------------
 # Bandera italiana con labels (Configuracion y ubicacion)
 greenflag = Label(wmenu_order,bg = "#009C45" ,height = 5 , width = 20)
@@ -41,44 +41,49 @@ menu_order_title = Label(
     wmenu_order, 
     text = "Italian Restaurant", 
     font = ("Arial", 36 , "bold"), 
-    fg = "#DE0A0D"
+    fg = "#DE0A0D",
+    bg="#D6D6D6",
 )
 menu_order_title.place(x = 100 , y = 10)
 # ---------------------------------------------------------------
 menu_order_subtitle = Label(
     wmenu_order, 
     text = "Manegeiment order", 
-    font = ("Arial", 20, "bold" )
+    font = ("Arial", 20, "bold" ),
+    bg="#D6D6D6"
 )
 menu_order_subtitle.place(x = 185, y = 190)
 # ---------------------------------------------------------------
 #butoons add , decla , update of order
 button_add_order = Button(
     wmenu_order,
-    text = "Ordenar", 
+    text = "Order", 
     font = ("Arial", 12, "bold"), 
     fg = "#FFFFFF", 
-    bg = "#000000", 
+    bg = "#29A873",
+    width=12,
     command = open_manegeorder
 )
-button_add_order.place(x = 250, y = 260 )
+button_add_order.place(x = 240, y = 260 )
 #---------------------------------------------------------------
 button_decla_order = Button(
     wmenu_order, 
-    text="Eliminar order", 
+    text="Delete order", 
     font=("Arial", 12, "bold"),
     fg="#FFFFFF",
-    bg="#000000",
+    bg="#DE0A0D",
+    width=12, 
     command=open_tableorder
 )
-button_decla_order.place(x = 245 , y = 330 )
+button_decla_order.place(x = 240 , y = 330 )
 #--------------------------------------------------------------- 
 button_update_order = Button(
     wmenu_order,
-    text="Actualizar order",
+    text="Update order",
     font=("Arial", 12, "bold"), 
     fg="#FFFFFF", 
-    bg="#000000",
+    bg="#3B7CC2",
+    width= 12, 
     command=open_tableorder
 )
 button_update_order.place(x=240, y=390 )

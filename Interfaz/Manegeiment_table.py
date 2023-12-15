@@ -22,7 +22,6 @@ def review_table():
     wmanege_table.destroy()
     subprocess.call(["python", "Interfaz\Table_table.py"])
 
-
 #Function add dish
 def add_dish_to_table():
     validate = True 
@@ -73,81 +72,90 @@ def add_dish_to_table():
         messagebox.showinfo("Success", "Data saved successfully")
         review_table()                                                                 # Show a success message
         
-        
-
-
 #---------------------------------------------------------------
 # Create window and configure it 
 wmanege_table = Tk() 
 wmanege_table.title("Italian Restaurant")
-wmanege_table.resizable(width = False, height = False)
+wmanege_table.resizable(width=False, height=False)
 wmanege_table.geometry("600x500")
-wmanege_table.configure(bg = "#FFFFFF")
+wmanege_table.configure(bg="#D6D6D6")
 #---------------------------------------------------------------
 # Bandera italiana con labels (Configuracion y ubicacion)
-greenflag = Label(wmanege_table,bg = "#009C45" ,height = 5 , width = 20)
-whiteflag=  Label(wmanege_table,bg = "#FFFFFF", height = 5 , width = 21)
-redflag = Label(wmanege_table,bg = "#B31200", height = 5 , width = 20)
-greenflag.place( x = 70, y = 100)
-whiteflag.place( x = 217, y = 100)
-redflag.place( x = 370, y = 100)
+greenflag = Label(wmanege_table,bg="#009C45" , height=5,width=20)
+whiteflag=  Label(wmanege_table,bg="#FFFFFF", height=5,width=21)
+redflag = Label(wmanege_table,bg="#B31200", height=5,width=20)
+greenflag.place(x=70, y=100)
+whiteflag.place(x=217, y=100)
+redflag.place(x=370, y=100)
 #---------------------------------------------------------------
 # title and text description (Configuracion y ubicacion)
-manegement_title = Label(wmanege_table, text = "Italian Restaurant", font = ("Arial", 40 , "bold"), bg = "#AAAAAA", fg = "#B31200", relief = "raised")
-manegement_title.place(x = 70 , y = 20) 
+manegement_title = Label(wmanege_table, 
+                         text="Italian Restaurant", 
+                         font=("Arial", 40 , "bold"), 
+                         bg="#D6D6D6", 
+                         fg="#B31200", 
+)
+manegement_title.place(x=70, y=20) 
 #---------------------------------------------------------------
 # label and entry of number the table (Configuracion y ubicacion)
-table_table_label = Label(wmanege_table, text = "# Table", font = ("Arial", 12), bg = "#FFFFFF")
-table_table_label.place(x = 70 , y = 200)
+table_table_label = Label(wmanege_table, 
+                          text="# Table", 
+                          font=("Arial", 14, "bold"), 
+                          bg="#D6D6D6")
+table_table_label.place(x=70, y=200)
 #Definimos las options 
 options = [" ","1","2","3","4","5","6","7","8","9","10"] 
 # Entry name 
 combo_table_table = Combobox(wmanege_table, values= options, state= "readonly" )
 combo_table_table.current(0) 
-combo_table_table.place(x = 70 , y = 230)
+combo_table_table.place(x=70, y=230)
 #---------------------------------------------------------------
 # label and entry date table (Configuracion y ubicacion) 
-date_table_label = Label(wmanege_table, text = "Date", font = ("Arial", 12), bg = "#FFFFFF")
-date_table_label.place(x = 70 , y = 260)
+date_table_label = Label(wmanege_table, 
+                         text="Date", 
+                         font=("Arial", 14, "bold"), 
+                         bg="#D6D6D6",
+)
+date_table_label.place(x=70, y=280)
 # entry date 
-entry_table_date = Entry(wmanege_table)
-entry_table_date.place(x = 70 , y = 290)
+entry_table_date = Entry(wmanege_table, width=24)
+entry_table_date.place(x=70, y=310)
 #---------------------------------------------------------------
 # label and entry hour table (Configuracion y ubicacion)
 hour_table_label = Label(
     wmanege_table, 
-    text = "Hour",
-    font = ("Arial", 12), 
-    bg = "#FFFFFF"
+    text="Hour",
+    font=("Arial", 14, "bold"), 
+    bg="#D6D6D6",
 )
-hour_table_label.place(x = 70 , y = 320)
+hour_table_label.place(x=300, y=200)
 # entry hour
-entry_table_hour = Entry(wmanege_table)
-entry_table_hour.place(x = 70 , y = 350)
+entry_table_hour = Entry(wmanege_table, width=24)
+entry_table_hour.place(x=300, y=230)
 #---------------------------------------------------------------
 # label and entry anumber of diners (Configuracion y ubicacion) 
 number_table_label = Label(
     wmanege_table, 
     text="# Diners ", 
-    font = ("Arial", 12), 
-    bg="#FFFFFF"
-)
-number_table_label.place(x = 70 , y = 380)
+    font=("Arial", 14, "bold"), 
+    bg="#D6D6D6"
+)    
+number_table_label.place(x=300, y=280)
 #Definimos las options 
 options = [" ","1","2","3","4","5","6","7","8","9","10"] 
 # Entry name 
 combo_table_npersons = Combobox(wmanege_table, values= options , state= "readonly" )
 combo_table_npersons.current(0) 
-combo_table_npersons.place(x=70 , y=420)
+combo_table_npersons.place(x=300, y=310)
 #---------------------------------------------------------------
 # button add table (Configuracion y ubicacion)
 add_dish = Button(
     wmanege_table, 
     text="Add Table", 
-    font=("arial", 12), 
-    bg="#AAAAAA", 
+    font=("arial", 12, "bold"), 
+    bg="#29A873", 
     fg="#FFFFFF", 
     command=add_dish_to_table)
-add_dish.place(x=250, y=450 )
+add_dish.place(x=240, y=400)
 #---------------------------------------------------------------
 wmanege_table.mainloop()

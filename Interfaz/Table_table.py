@@ -138,7 +138,7 @@ boton_eliminar = Button(
     text="Delete", 
     command= delete_row,
     width= 7
-                        )
+)
 boton_eliminar.place(x=510, y=350)
 
 boton_actualizar = Button(
