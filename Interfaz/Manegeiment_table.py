@@ -46,22 +46,22 @@ def add_dish_to_table():
             entrytime = datetime.strptime(date, '%Y/%m/%d')
             timenow = datetime.now() 
             if entrytime.date() < timenow.date():
-                messagebox.showerror("Error", "La fecha no puede ser anterior a la fecha actual.")
+                messagebox.showerror("Error", "The date can not before the match actual.")
                 entry_table_date.delete(0, 'end')
                 validate = False 
         except ValueError:
-            messagebox.showerror("Error", "Fecha inválida. Por favor, introduzca la fecha en el formato 'YYYY-MM-DD'")
+            messagebox.showerror("Error", "Entry inválid. Please, Enter the match in format 'YYYY-MM-DD'")
             entry_table_date.delete(0, 'end')
             validate = False              
     if len(hour) != 5:  # Only validate if the hour is complete
         try:
             datetime.strptime(hour, '%H:%M')
         except ValueError:
-            messagebox.showerror("Error", "Invalid time. Please enter the time in the format 'HH:MM'")
+            messagebox.showerror("Error", "Invalid Entry. Please enter the time in the format 'HH:MM'")
             entry_table_hour.delete(0, 'end')
             validate = False 
     if len(hour) >= 3 and ":" not in hour:  # If ":" is not in the input and the input has at least 3 characters, show an error
-        messagebox.showerror("Error", "Invalid time. Please enter the time in the format 'HH:MM'")
+        messagebox.showerror("Error", "Invalid Entry. Please enter the time in the format 'HH:MM'")
         entry_table_hour.delete(0, 'end')
         validate = False       
     elif validate == True:                                                                  #Save table data to a JSON file

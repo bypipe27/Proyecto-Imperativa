@@ -34,7 +34,7 @@ def add_dish_to_table():
         e_num_order.delete(0, 'end')
         validate = False 
     if not num_order_[1:len(num_order_)].isdigit():
-        messagebox.showerror("Error", "Num order only contain with numbers.")
+        messagebox.showerror("Error", "Number of order only contain numbers.")
         e_num_order.delete(0, 'end')
         validate = False
     elif validate == True:              # Save dish data to a JSON file
