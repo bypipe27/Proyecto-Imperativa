@@ -46,19 +46,18 @@ def add_dish_to_table():
         messagebox.showinfo("Success", "Data saved successfully")
         review_dish()
 
-
 #---------------------------------------------------------------
 # Create window and configure it 
 windows_manege_order = Tk() 
 windows_manege_order.title("Italian Restaurant")
-windows_manege_order.resizable(width = False, height = False)
+windows_manege_order.resizable(width=False, height=False)
 windows_manege_order.geometry("600x500")
-windows_manege_order.configure(bg= "#FFFFFF")
+windows_manege_order.configure(bg= "#D6D6D6")
 #---------------------------------------------------------------
 # Bandera italiana con labels (Configuracion y ubicacion)
-greenflag = Label(windows_manege_order,bg= "#009C45", height=5,width=20)
-whiteflag=  Label(windows_manege_order,bg= "#FFFFFF", height=5,width=21)
-redflag = Label(windows_manege_order,bg= "#B31200", height=5,width=20)
+greenflag = Label(windows_manege_order,bg="#009C45", height=5,width=20)
+whiteflag=  Label(windows_manege_order,bg="#FFFFFF", height=5,width=21)
+redflag = Label(windows_manege_order,bg="#B31200", height=5,width=20)
 greenflag.place(x=70, y=100)
 whiteflag.place(x=217, y=100)
 redflag.place(x=370, y=100)
@@ -68,9 +67,8 @@ manegementtitle = Label(
     windows_manege_order, 
     text= "Italian Restaurant", 
     font= ("Arial", 40 , "bold"),
-    bg= "#AAAAAA", 
+    bg= "#D6D6D6", 
     fg= "#DE0A0D", 
-    relief= "raised"
 )
 manegementtitle.place(x=70, y=20) 
 #---------------------------------------------------------------
@@ -78,32 +76,35 @@ manegementtitle.place(x=70, y=20)
 num_order = Label(
     windows_manege_order, 
     text= "# Order", 
-    font= ("Arial", 12), 
-    bg= "#FFFFFF"
+    font= ("Arial", 12, "bold"), 
+    bg= "#D6D6D6"
 ) 
-num_order.place(x=70, y=140) 
-e_num_order = Entry(windows_manege_order, font=("Arial", 12), bg="#FFFFFF") 
-e_num_order.place(x=70, y=170) 
+num_order.place(x=70, y=260) 
+e_num_order = Entry(windows_manege_order, font=("Arial", 10), width=16) 
+e_num_order.place(x=70, y=285) 
 #---------------------------------------------------------------
 # label and entry name dish (Configuracion y ubicacion)
-num_table = Label(windows_manege_order, 
-                  text= "# Table", 
-                  font= ("Arial", 12), 
-                  bg= "#FFFFFF")
-num_table.place(x=70, y=200)
+num_table = Label(
+    windows_manege_order, 
+    text= "# Table", 
+    font= ("Arial", 12, "bold"), 
+    bg= "#D6D6D6")
+num_table.place(x=290, y=260)
 #Definimos las options
 options = ["1","2","3","4","5","6","7","8","9","10"]
 # Entry name 
 e_num_table = Combobox(windows_manege_order, values=options, state="readonly")
-e_num_table.place(x=70, y=230)
+e_num_table.place(x=290, y=285)
 #---------------------------------------------------------------
 # button add dish (Configuracion y ubicacion)
-add_dish = Button(windows_manege_order, 
-                  text= "Add dish", 
-                  font= ("arial", 12), 
-                  bg= "#AAAAAA", 
-                  fg= "#FFFFFF", 
-                  command= add_dish_to_table)
-add_dish.place(x=250, y=450 )
+add_dish = Button(
+    windows_manege_order, 
+    text="Add dish", 
+    font=("arial", 12, "bold"), 
+    bg="#29A873",
+    fg="#FFFFFF",
+    command=add_dish_to_table
+    )
+add_dish.place(x=250, y=400 )
 #---------------------------------------------------------------
 windows_manege_order.mainloop()

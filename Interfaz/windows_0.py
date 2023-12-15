@@ -24,41 +24,41 @@ def open_register():
 # Definimos la ventana principal y configuramos (Define the main window and configure)
 windowscero = Tk()
 windowscero.title("Italian Restaurant")
-windowscero.resizable(width = False, height = False)
+windowscero.resizable(width=False, height=False)
 windowscero.geometry("600x500")
 windowscero.configure(bg = "#D6D6D6")
 #----------------------------------------------------------------
 # Bandera italiana con labels (Configuracion y ubicacion) 
-greenflag = Label(windowscero,bg = "#009C45" ,height = 5 , width = 20)
-whiteflag=  Label(windowscero,bg = "#FFFFFF", height = 5 , width = 21)
-redflag = Label(windowscero,bg = "#B31200", height = 5 , width = 20)
-greenflag.place( x = 70, y = 100)
-whiteflag.place( x = 217, y = 100)
-redflag.place( x = 370, y = 100)
+greenflag = Label(windowscero, bg="#009C45", height=5 , width=20)
+whiteflag=  Label(windowscero, bg="#FFFFFF", height=5 , width=21)
+redflag = Label(windowscero, bg="#B31200", height=5 , width=20)
+greenflag.place( x=70, y=100)
+whiteflag.place( x=217, y=100)
+redflag.place( x=370, y=100)
 #----------------------------------------------------------------
 # title and text description (Configuracion y ubicacion)
 cero_title = Label(
     windowscero, 
-    text = "Italian Restaurant", 
-    font = ("Arial", 40 , "bold"), 
-    bg = "#D6D6D6", 
-    fg = "#E81522", 
+    text="Italian Restaurant", 
+    font=("Arial", 40 , "bold"), 
+    bg="#D6D6D6", 
+    fg="#E81522", 
 )
 cero_text =  Label(
     windowscero,
-    text = (
+    text=(
 "Enjoy authentic Italian flavors in our cozy restaurant." 
 " From classic pastas to artisanal pizzas,"
 "each bite is a unique experience." 
 " Welcome to a place where passion meets quality in every dish."),
-    font = ("Arial", 12),
-    bg = "#D6D6D6",
-    justify = "left",
-    wraplength = 452
+    font=("Arial", 12),
+    bg="#D6D6D6",
+    justify="left",
+    wraplength=452
 )
 # Ubicacion de los labels 
-cero_title.place(x = 70 , y = 20)
-cero_text.place(x = 70 , y = 200)
+cero_title.place(x=70 , y=20)
+cero_text.place(x=70 , y=200)
 #----------------------------------------------------------------
 # button register and button login ( Configure buttons and ubications )
 cero_login_button = Button(

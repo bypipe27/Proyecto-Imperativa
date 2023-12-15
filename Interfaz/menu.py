@@ -101,7 +101,8 @@ options_buton_close = Button(
     relief="raised", 
     bg="#CC0206",
     fg="#F9F6FF",
-    command=close_program )
-options_buton_close.place(x=275 , y=420 )
+    command=close_program 
+)
+options_buton_close.place(x=275 , y=420)
 #-------------------------------------------------------------------------------------
 windowsmenu.mainloop() 

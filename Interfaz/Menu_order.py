@@ -7,6 +7,7 @@ Proyecto final - Fundamentos de programacion Imperativa
 Grupo - 52 
 Docente: Luis German Toro
 """
+#---------------------------------------------------------------
 # Importamos las librerias necesarias 
 from tkinter import *
 from tkinter import messagebox
@@ -20,7 +21,7 @@ def open_manegeorder():
 def open_tableorder():
     wmenu_order.withdraw()
     subprocess.call(["python", "Interfaz\Table_order.py"]) 
-
+# ---------------------------------------------------------------
 # Creamos y configuramos ventana para ordenar
 wmenu_order = Tk()
 wmenu_order.title("Order")

@@ -7,6 +7,7 @@ Proyecto final - Fundamentos de programacion Imperativa
 Grupo - 52 
 Docente: Luis German Toro
 """
+#--------------------------------------------------------------------------
 # importamos librerias
 from tkinter import *
 from tkinter import messagebox
@@ -81,12 +82,12 @@ button_decla_table.place(x=240, y=330)
 #---------------------------------------------------------------
 button_update_table = Button(
     wmenu_table, 
-    text = "Update Table", 
-    font = ("Arial", 12, "bold"), 
-    fg = "#FFFFFF", 
-    bg = "#3B7CC2",
-    width= 12,
-    command= open_tabletable
+    text="Update Table", 
+    font=("Arial", 12, "bold"), 
+    fg="#FFFFFF", 
+    bg="#3B7CC2",
+    width=12,
+    command=open_tabletable
 )
 button_update_table.place(x=240, y=390)
 #--------------------------------------------------------------- 

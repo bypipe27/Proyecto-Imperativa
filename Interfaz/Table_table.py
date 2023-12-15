@@ -1,3 +1,13 @@
+"""
+Felipe Ortiz Calan - 2380642
+Samuel Valdes Gomez - 2380346
+Santiago Velasquez Bedoya  - 2380378
+
+Proyecto final - Fundamentos de programacion Imperativa 
+Grupo - 52 
+Docente: Luis German Toro
+"""
+#----------------------------------------------------------------
 from tkinter import *
 from tkinter import ttk 
 import subprocess 
@@ -6,7 +16,7 @@ from tkinter import messagebox
 from tkinter.ttk import Combobox
 #---------------------------------------------------------------
 #----------------------------------------------------------------------------- 
-#Funcion para eliminar una table
+#Funcion para eliminar la seleccion de la tabla 
 def delete_row():
     selection = table_t.selection()
     if not selection:
@@ -34,7 +44,7 @@ def update_row():
     # Creamos ventana para actualizar la fila 
     global update_window # la definimos como global para cerrala en la segunda funcion 
     update_window = Toplevel() #New window
-    update_window.title("Update Row")
+    update_window.title("Update Order")
     update_window.geometry("400x400") 
     #Definimos unas variables temporales para facilitar la actualizacion 
     table_u = StringVar()
@@ -42,11 +52,11 @@ def update_row():
     hour_u = StringVar()
     people_u = StringVar() 
     # Create entry fields for each column
-    tittle_u = Label(update_window, text="Update Row", font=("Arial", 20)).pack() #Title 
+    tittle_u = Label(update_window, text="Update Order", font=("Arial", 20)).pack() #Title 
     # Definimos las options
     options = ["1","2","3","4","5","6","7","8","9","10"]
     labtable_u = Label(update_window, text="Table").pack() #Label 
-    Combobox(update_window,values= options , state= "readonly" ,textvariable=table_u).pack() #Entry 
+    Combobox(update_window, values=options, state="readonly", textvariable=table_u).pack() #Entry 
     labdate_u = Label(update_window, text="Date").pack() #Label
     Entry(update_window, textvariable=date_u).pack() #Entry 
     labhour_u = Label(update_window, text="Hour").pack() #Label
@@ -73,18 +83,18 @@ table_table.resizable(width=False, height=False)
 table_table.configure(bg="#F0F0F0")
 #---------------------------------------------------------------
 # Bandera italiana con labels en ventana dish menu (Configuracion y ubicacion) 
-greenflag = Label(table_table,bg = "#009C45" ,height = 3 , width = 20)
-whiteflag=  Label(table_table,bg = "#FFFFFF", height = 3 , width = 21)
-redflag = Label(table_table,bg = "#B31200", height = 3 , width = 20)
-greenflag.place( x = 70, y = 100)
-whiteflag.place( x = 217, y = 100)
-redflag.place( x = 370, y = 100)
+greenflag = Label(table_table, bg="#009C45", height=3, width=20)
+whiteflag=  Label(table_table, bg="#FFFFFF", height=3 , width=21)
+redflag = Label(table_table, bg="#B31200", height=3 , width=20)
+greenflag.place(x=70, y=100)
+whiteflag.place(x=217, y=100)
+redflag.place(x=370, y=100)
 #----------------------------------------------------------------
 # tittle and subtitles en el dishmenu
-menudishtitle = Label(table_table, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#DE0A0D")
-menudishtitle.place(x = 100 , y = 10)
-menudishsubtitle = Label(table_table, text = "Manegeiment Table", font = ("Arial", 20, "bold" ))
-menudishsubtitle.place(x = 185, y = 160)
+menu_dish_title = Label(table_table, text="Italian Restaurant", font=("Arial", 36 , "bold"), fg="#DE0A0D")
+menu_dish_title.place(x=100 , y=10)
+menu_dish_subtitle = Label(table_table, text="Manegeiment Table", font=("Arial", 20, "bold" ))
+menu_dish_subtitle.place(x=185, y=160)
 #----------------------------------------------------------------
 
 frame_subtab = Frame(table_table, bg="#FFFFFF", width=600, height=500)
@@ -131,25 +141,25 @@ table_t.pack()
 
 boton_eliminar = Button(
     table_table,
-    justify= "center",
-    font= ('Arial,',12,"bold"),
+    justify="center",
+    font=('Arial,',12,"bold"),
     bg="#DE0A0D",
-    fg ="#FFFFFF",
+    fg="#FFFFFF",
     text="Delete", 
-    command= delete_row,
-    width= 7
+    command=delete_row,
+    width=7
 )
 boton_eliminar.place(x=510, y=350)
 
 boton_actualizar = Button(
     table_table,
-    justify= "center",
+    justify="center",
     text="Update",
     bg="#009C45",
     font=('Arial',12,"bold"),
-    fg ="#FFFFFF",
+    fg="#FFFFFF",
     command=update_row,
-    width= 7
+    width=7
 )
 boton_actualizar.place(x=510, y=390) 
 #---------------------------------------------------------------
@@ -160,7 +170,7 @@ boton_back = Button(
     text="Back",
     bg="#3B7CC2",
     font=('Arial',12,"bold"),
-    fg ="#FFFFFF",
+    fg="#FFFFFF",
     command=back_to_menu,
     width= 7
 )

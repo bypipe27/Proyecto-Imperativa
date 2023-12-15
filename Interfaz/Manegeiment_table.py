@@ -89,7 +89,8 @@ whiteflag.place(x=217, y=100)
 redflag.place(x=370, y=100)
 #---------------------------------------------------------------
 # title and text description (Configuracion y ubicacion)
-manegement_title = Label(wmanege_table, 
+manegement_title = Label(
+    wmanege_table, 
     text="Italian Restaurant", 
     font=("Arial", 40 , "bold"), 
     bg="#D6D6D6", 

@@ -1,3 +1,12 @@
+"""
+Felipe Ortiz Calan - 2380642
+Samuel Valdes Gomez - 2380346
+Santiago Velasquez Bedoya  - 2380378
+
+Proyecto final - Fundamentos de programacion Imperativa 
+Grupo - 52 
+Docente: Luis German Toro
+"""
 #-----------------------------------------------------------------------------
 #importamos librerias 
 from tkinter import * 
@@ -59,15 +68,16 @@ windows_manege_dish.geometry("600x500")
 windows_manege_dish.configure(bg= "#D6D6D6")
 #---------------------------------------------------------------
 # Bandera italiana con labels (Configuracion y ubicacion)
-greenflag = Label(windows_manege_dish,bg="#009C45", height=5,width= 20)
-whiteflag=  Label(windows_manege_dish,bg="#FFFFFF", height=5,width= 21)
-redflag = Label(windows_manege_dish,bg="#B31200", height=5,width= 20)
+greenflag = Label(windows_manege_dish,bg="#009C45", height=5, width=20)
+whiteflag=  Label(windows_manege_dish,bg="#FFFFFF", height=5, width=21)
+redflag = Label(windows_manege_dish,bg="#B31200", height=5, width=20)
 greenflag.place(x=70, y=100)
 whiteflag.place(x=217, y=100)
 redflag.place(x=370, y=100)
 #---------------------------------------------------------------
 # title and text description (Configuracion y ubicacion)
-manegementtitle = Label(windows_manege_dish, 
+manegementtitle = Label(
+    windows_manege_dish, 
     text="Italian Restaurant", 
     font=("Arial", 40 , "bold"), 
     bg="#D6D6D6", 
@@ -76,20 +86,24 @@ manegementtitle = Label(windows_manege_dish,
 manegementtitle.place(x=70, y=20) 
 #---------------------------------------------------------------
 # label and entry name dish (Configuracion y ubicacion)
-name_dish = Label(windows_manege_dish, 
+name_dish = Label(
+    windows_manege_dish, 
     text="Name dish", 
     font=("Arial", 12, "bold"), 
-    bg="#D6D6D6")
+    bg="#D6D6D6"
+)
 name_dish.place(x=70, y=200)
 # Entry name 
 entry_dish_name = Entry(windows_manege_dish, width=23)
 entry_dish_name.place(x=70, y=230)
 #---------------------------------------------------------------
 # label and entry price dish (Configuracion y ubicacion)
-price_dish = Label(windows_manege_dish, 
-                   text= "Price dish", 
-                   font= ("Arial", 12, "bold"), 
-                   bg= "#D6D6D6")
+price_dish = Label(
+    windows_manege_dish, 
+    text= "Price dish", 
+    font= ("Arial", 12, "bold"), 
+    bg= "#D6D6D6"
+)
 price_dish.place(x=350, y=200)
 #Price entry 
 
@@ -97,34 +111,39 @@ entry_price_dish = Entry(windows_manege_dish, width=23)
 entry_price_dish.place(x=350, y=230)
 #---------------------------------------------------------------
 # label and entry description dish (Configuracion y ubicacion)
-ldescrpit_dish = Label(windows_manege_dish, 
-                       text= "Description dish", 
-                       font= ("Arial", 12, "bold"), 
-                       bg= "#D6D6D6")
+ldescrpit_dish = Label(
+    windows_manege_dish, 
+    text= "Description dish", 
+    font= ("Arial", 12, "bold"), 
+    bg= "#D6D6D6"
+)
 ldescrpit_dish.place(x=70, y=280)
 #Description entry 
 entry_dish_description = Entry(windows_manege_dish, width=23)
 entry_dish_description.place(x=70, y=310)
 #---------------------------------------------------------------
 # label and entry availability dish (Configuracion y ubicacion)
-availability_dish = Label(windows_manege_dish, 
-                    text= "Availability dish", 
-                    font= ("Arial", 12, "bold"), 
-                    bg= "#D6D6D6")
+availability_dish = Label(
+    windows_manege_dish, 
+    text= "Availability dish", 
+    font= ("Arial", 12, "bold"), 
+    bg= "#D6D6D6"
+)
 availability_dish.place(x=350, y=280)
 #Definimos las options
 options = [" ","Yes","No"] 
 #Availability entry 
-entry_stock_dish = Combobox(windows_manege_dish, values = options, state= "readonly" )
+entry_stock_dish = Combobox(windows_manege_dish, values=options, state="readonly" )
 entry_stock_dish.place(x=350, y=310)
 #---------------------------------------------------------------
 # button add dish (Configuracion y ubicacion)
-add_dish = Button(windows_manege_dish, 
-                  text= "Add dish", 
-                  font= ("arial", 12, "bold"), 
-                  bg= "#29A873", 
-                  fg= "#FFFFFF", 
-                  command= add_dish_to_table)
+add_dish = Button(
+    windows_manege_dish, 
+    text="Add dish", 
+    font=("arial", 12, "bold"), 
+    bg="#29A873", 
+    fg="#FFFFFF", 
+    command=add_dish_to_table)
 add_dish.place(x=240, y=350)
 #---------------------------------------------------------------
 windows_manege_dish.mainloop()

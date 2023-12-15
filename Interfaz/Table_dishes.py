@@ -1,3 +1,13 @@
+"""
+Felipe Ortiz Calan - 2380642
+Samuel Valdes Gomez - 2380346
+Santiago Velasquez Bedoya  - 2380378
+
+Proyecto final - Fundamentos de programacion Imperativa 
+Grupo - 52 
+Docente: Luis German Toro
+"""
+#-------------------------------------------------------------------------------
 from tkinter import *
 from tkinter import ttk 
 import subprocess 
@@ -148,7 +158,7 @@ boton_update = Button(
     text="Update",
     bg="#3B7CC2",
     font=('Arial',12,"bold"),
-    fg ="#FFFFFF",
+    fg="#FFFFFF",
     command=update_row, 
     width= 7)
 boton_update.place(x=510, y=390) 
@@ -160,9 +170,10 @@ button_back = Button(
     text="Back",
     bg="#63C2AC",
     font=('Arial',12,"bold"),
-    fg ="#FFFFFF",
+    fg="#FFFFFF",
     command=back_to_menu, 
-    width= 7) 
+    width= 7
+) 
 button_back.place(x=30, y=430) 
 #--------------------------------------------------------------- 
 table_table.mainloop()
