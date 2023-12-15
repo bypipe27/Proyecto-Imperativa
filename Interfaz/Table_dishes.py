@@ -84,6 +84,7 @@ def confirm_update(selected, name_u, price_u, descrip_u, availability_u):
 def back_to_menu():
     table_table.destroy()
     subprocess.call(["python", "Interfaz\menu.py"]) 
+#--------------------------------------------------------------
 table_table = Tk()
 table_table.title("Managementc Dish")
 table_table.geometry("600x500")
