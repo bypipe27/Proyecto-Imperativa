@@ -5,9 +5,6 @@ import json
 from tkinter import messagebox 
 from tkinter.ttk import Combobox 
 #---------------------------------------------------------------
-
-
-#---------------------------------------------------------------
 def delete_row():
     selected = table_di.selection()
     if not selected:

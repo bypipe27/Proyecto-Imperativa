@@ -38,13 +38,15 @@ def verify_email_login():
                     email1, password1 = line.strip().split(',')
                     if email1 == email2 and password1 == password2:
                         messagebox.showinfo("Success", "User logged in")
-                        windowslogin.destroy()
-                        subprocess.call(["Interfaz\menu.py"])
-                        return 
+                        open_menu() 
                 messagebox.showerror("Error", "Email and passssword incorrect")
 
-#---------------------------------------------------------------
-                
+#--------------------------------------------------------------- 
+# funcion que va al menu 
+def open_menu():
+    windowslogin.destroy()
+    subprocess.call(["python", "Interfaz/menu.py"]) 
+
 # funcion para ir al registro                
 def register():
     windowslogin.destroy()

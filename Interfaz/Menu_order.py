@@ -43,11 +43,13 @@ menu_order_subtitle = Label(wmenu_order, text = "Manegeiment order", font = ("Ar
 menu_order_subtitle.place(x = 185, y = 190)
 # ---------------------------------------------------------------
 #butoons add , decla , update of order
-button_add_order = Button(wmenu_order,
-                          text = "Ordenar", 
-                          font = ("Arial", 12, "bold"), 
-                          fg = "#FFFFFF", bg = "#000000", 
-                          command = open_manegeorder)
+button_add_order = Button(
+    wmenu_order,
+    text = "Ordenar", 
+    font = ("Arial", 12, "bold"), 
+    fg = "#FFFFFF", 
+    bg = "#000000", 
+    command = open_manegeorder)
 button_add_order.place(x = 250, y = 260 )
 #---------------------------------------------------------------
 button_decla_order = Button(wmenu_order, 

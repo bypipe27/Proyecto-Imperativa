@@ -43,36 +43,42 @@ cero_title = Label(windowscero,
                   bg = "#AAAAAA", fg = "red", 
                   relief = "raised"
                   )
-cero_text =  Label(windowscero,
-                text = (
+cero_text =  Label(
+    windowscero,
+    text = (
 "Enjoy authentic Italian flavors in our cozy restaurant." 
 " From classic pastas to artisanal pizzas,"
 "each bite is a unique experience." 
 " Welcome to a place where passion meets quality in every dish."),
-                font = ("Arial", 12),
-                bg = "#FFFFFF",
-                justify = "left",
-                wraplength = 452)
+    font = ("Arial", 12),
+    bg = "#FFFFFF",
+    justify = "left",
+    wraplength = 452
+)
 # Ubicacion de los labels 
 cero_title.place(x = 70 , y = 20)
 cero_text.place(x = 70 , y = 200)
 #----------------------------------------------------------------
 # button register and button login ( Configure buttons and ubications )
-cero_login_button = Button(windowscero, 
-                         text = "Login", 
-                         font = ("arial", 12), 
-                         bg = "#AAAAAA", 
-                         fg = "#FFFFFF", 
-                         command = open_login)
-cero_login_button.place(x = 250, y = 300 )
+cero_login_button = Button(
+    windowscero, 
+    text = "Login", 
+    font = ("arial", 12), 
+    bg = "#AAAAAA", 
+    fg = "#FFFFFF", 
+    command = open_login
+)
+cero_login_button.place(x=250, y=300 )
 
-cero_register_button = Button(windowscero, 
-                            text = "register account", 
-                            font = ("arial", 12), 
-                            bg = "#AAAAAA", 
-                            fg = "#FFFFFF", 
-                            command = open_register)
-cero_register_button.place(x = 240 , y = 350 )
+cero_register_button = Button(
+    windowscero, 
+    text="register account", 
+    font=("arial", 12), 
+    bg="#AAAAAA", 
+    fg="#FFFFFF", 
+    command=open_register
+)
+cero_register_button.place(x=240 , y=350 )
 #----------------------------------------------------------------
 # mainloop the windows 
 windowscero.mainloop() 

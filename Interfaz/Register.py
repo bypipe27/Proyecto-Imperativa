@@ -35,18 +35,22 @@ def verify_email():
         not any(character.isupper() for character in password) or
         not any(character.islower() for character in password) or
         not any(character in "!\?$@&/"  for character in password)):
-        messagebox.showerror("Error", "Password invalid")
+        messagebox.showerror("Error", "Password invalid (10 characters, 1 uppercase, 1 lowercase, 1 number, 1 special character))")
     else: 
-        with open("register_inicio.txt", "a") as file:
+        with open("Data\Register_inicio.txt", "a") as file:
             file.write(f"{email},{password}\n")
               # Guardamos el email y la contraseña en un archivo de texto
         passwordcrypt = hashlib.sha256(password.encode())   # Encryptamos the password 
-        with open("password.txt", "a") as file:       
+        with open("Data\password.txt", "a") as file:       
             file.write(f"{passwordcrypt.hexdigest()}\n")   # Guardamos el email y la contraseña en un archivo de texto
                                                                                           
-        messagebox.showinfo("Success", "User registered") 
-        windowsregister.destroy()                               # Cerramos la ventana de register y abrimos la de login
-        subprocess.call(["python", "Login.py"]) 
+        messagebox.showinfo("Success", "User registered")
+        back_to_login()                                    # Volvemos a la ventana de login 
+
+
+def back_to_login():     
+    windowsregister.destroy()                               # Cerramos la ventana de register y abrimos la de login
+    subprocess.call(["python", "Interfaz\Login.py"]) 
 
 #--------------------------------------------------------------------------------------------------------------
 # Bandera italiana con labels en ventana de inciciar sesion (Configuracion y ubicacion) 

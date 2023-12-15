@@ -33,7 +33,6 @@ def close_program():
 #--------------------------------------------------------------------------------
 #windowsmenu despues de iniciar sesion 
 windowsmenu = Tk()
-windowsmenu.withdraw()
 windowsmenu.geometry("600x500")
 windowsmenu.resizable(width = False , height = False)
 windowsmenu.title("windowsmenu")
@@ -47,37 +46,45 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #-------------------------------------------------------------------------------------------------
 #title and subtitles en el menu de opciones configuracion and positions 
-optionsmenutitle = Label(windowsmenu, 
-                         text = "Italian Restaurant", 
-                         font = ("Arial", 36 , "bold"), 
-                         fg = "#B31200")
+optionsmenutitle = Label(
+    windowsmenu, 
+    text = "Italian Restaurant", 
+    font = ("Arial", 36 , "bold"), 
+    fg = "#B31200"
+)
 optionsmenutitle.place(x = 100 , y = 10)
 #-------------------------------------------------------------------------------------------------
 optionsmenusubtitle = Label(windowsmenu, text = "Welcome", font = ("Arial", 20, "bold" ))
 optionsmenusubtitle.place(x = 240, y = 190 )
 #-------------------------------------------------------------------------------------------------
 #butonns del menu configuracion and postions 
-optionsbutondish = Button(windowsmenu,
-                          text="Dish management", 
-                          font=("arial", 12), 
-                          relief="raised",
-                          command=open_dish)
+optionsbutondish = Button(
+    windowsmenu,
+    text="Dish management", 
+    font=("arial", 12), 
+    relief="raised",
+    command=open_dish
+)
 optionsbutondish.place(x = 242, y = 240 )
 #--------------------------------------------------------------------------------------------------
 #Boton que abre la ventana de menu de mesas 
-optionsbutontable = Button(windowsmenu, 
-                           text = "Table management", 
-                           font = ("arial", 12), 
-                           relief = "raised", 
-                           command= open_table) 
+optionsbutontable = Button(
+    windowsmenu, 
+    text = "Table management", 
+    font = ("arial", 12), 
+    relief = "raised", 
+    command= open_table
+) 
 optionsbutontable.place(x = 240, y = 300 )
 #-----------------------------------------------------------------------------------------------------
 #Boton que abre la ventana de menu de pedidos 
-optionsbutondelivery = Button(windowsmenu,
-                              text = "Order management",  
-                              font = ("arial", 12), 
-                              relief = "raised", 
-                              command = open_delivery )
+optionsbutondelivery = Button(
+    windowsmenu,
+    text = "Order management",  
+    font = ("arial", 12), 
+    relief = "raised", 
+    command = open_delivery 
+)
 optionsbutondelivery.place(x = 242 , y = 360 )
 #-----------------------------------------------------------------------------------------------------
 #Boton que cierra la ventana de menu

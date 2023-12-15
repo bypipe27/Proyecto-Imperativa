@@ -39,34 +39,50 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 # ---------------------------------------------------------------
 # tittle and subtitles en el table_menu
-menu_dish_title = Label(wmenu_table, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
-menu_dish_title.place(x = 100 , y = 10)
-menu_dish_subtitle = Label(wmenu_table, text = "Manegeiment order", font = ("Arial", 20, "bold" ))
-menu_dish_subtitle.place(x = 185, y = 190)
+menu_dish_title = Label(
+    wmenu_table, 
+    text = "Italian Restaurant", 
+    font = ("Arial", 36 , "bold"),
+    fg = "#B31200"
+)
+menu_dish_title.place(x=100 , y=10)
+# ---------------------------------------------------------------
+menu_dish_subtitle = Label(
+    wmenu_table, 
+    text="Manegeiment order", 
+    font=("Arial", 20, "bold" )
+)
+menu_dish_subtitle.place(x=185, y=190)
 # ---------------------------------------------------------------
 #butoons add , decla , update of table
-button_add_table = Button(wmenu_table,
-                        text = "Add Table", 
-                        font = ("Arial", 12, "bold"), 
-                        fg = "#FFFFFF", 
-                        bg = "#000000", 
-                        command = open_manegetable)
-button_add_table.place(x = 250, y = 260 )
+button_add_table = Button(
+    wmenu_table,
+    text = "Add Table", 
+    font = ("Arial", 12, "bold"), 
+    fg = "#FFFFFF", 
+    bg = "#000000", 
+    command = open_manegetable
+)
+button_add_table.place(x=250, y=260)
 #---------------------------------------------------------------
-button_decla_table = Button(wmenu_table, 
-                          text = "Delete Table", 
-                          font = ("Arial", 12, "bold"), 
-                          fg = "#FFFFFF", 
-                          bg = "#000000",
-                          command= open_tabletable)
+button_decla_table = Button(
+    wmenu_table, 
+    text="Delete Table", 
+    font=("Arial", 12, "bold"), 
+    fg="#FFFFFF", 
+    bg="#000000",
+    command=open_tabletable
+)
 button_decla_table.place(x = 245 , y = 330 )
 #---------------------------------------------------------------
-button_update_table = Button(wmenu_table, 
-                           text = "Update Table", 
-                           font = ("Arial", 12, "bold"), 
-                           fg = "#FFFFFF", 
-                           bg = "#000000",
-                           command= open_tabletable)
+button_update_table = Button(
+    wmenu_table, 
+    text = "Update Table", 
+    font = ("Arial", 12, "bold"), 
+    fg = "#FFFFFF", 
+    bg = "#000000",
+    command= open_tabletable
+)
 button_update_table.place(x = 240, y = 390 )
 #--------------------------------------------------------------- 
 wmenu_table.mainloop()
