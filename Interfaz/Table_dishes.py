@@ -54,7 +54,7 @@ def update_row():
     # Definimos las options
     options = ["Yes","No"] 
     labdispon_u = Label(update_window, text="Availability").pack() #Label 
-    Combobox(update_window, values = options, state= "readonly" ,textvariable= availability_u).pack() #Entry 
+    Combobox(update_window, values=options, state="readonly" ,textvariable=availability_u).pack() #Entry 
     
     # Update button in the top windows 
     Button(
@@ -81,25 +81,24 @@ table_table.resizable(width=False, height=False)
 table_table.configure(bg="#F0F0F0")
 #---------------------------------------------------------------
 # Bandera italiana con labels en ventana dish menu (Configuracion y ubicacion) 
-greenflag = Label(table_table,bg = "#009C45" ,height = 3 , width = 20)
-whiteflag=  Label(table_table,bg = "#FFFFFF", height = 3 , width = 21)
-redflag = Label(table_table,bg = "#B31200", height = 3 , width = 20)
-greenflag.place( x = 70, y = 100)
-whiteflag.place( x = 217, y = 100)
-redflag.place( x = 370, y = 100)
+greenflag = Label(table_table, bg="#009C45", height=3, width=20)
+whiteflag=  Label(table_table,bg="#FFFFFF", height=3, width=21)
+redflag = Label(table_table, bg="#B31200", height=3, width=20)
+greenflag.place(x=70, y=100)
+whiteflag.place(x=217, y=100)
+redflag.place(x=370, y=100)
 #----------------------------------------------------------------
 # tittle and subtitles en el dishmenu
-menudishtitle = Label(table_table, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
-menudishtitle.place(x = 100 , y = 10)
-menudishsubtitle = Label(table_table, text = "Manegeiment dish", font = ("Arial", 20, "bold" ))
-menudishsubtitle.place(x = 185, y = 160)
+menudishtitle = Label(table_table, text="Italian Restaurant", font=("Arial", 36 , "bold"), fg="#B31200")
+menudishtitle.place(x=100 , y=10)
+menudishsubtitle = Label(table_table, text="Manegeiment dish", font=("Arial", 20, "bold" ))
+menudishsubtitle.place(x=185, y=160)
 #----------------------------------------------------------------
 
 frame_subtab = Frame(table_table, bg="#FFFFFF", width=600, height=500)
-frame_subtab.place(x=140, y= 230)
+frame_subtab.place(x=140, y=230)
 #Table
 table_di = ttk.Treeview(frame_subtab, columns=("1", "2", "3","4"))
-
 #Columns
 table_di.column("#0",width=0, minwidth=0, anchor=CENTER)
 table_di.column("1",width=55, minwidth=55, anchor=CENTER)
@@ -134,22 +133,24 @@ for key, record in tables.items():
         
 table_di.pack() 
 #---------------------------------------------------------------
-boton_delete = Button(table_table,
-                        justify= "center",
-                        font= ('Arial,',12,"bold"),
-                        bg="#B31200",fg ="#FFFFFF" , 
-                        text="Delete", command=delete_row , 
-                        width= 7)
+boton_delete = Button(
+    table_table,
+    justify= "center",
+    font= ('Arial,',12,"bold"),
+    bg="#B31200",fg ="#FFFFFF" , 
+    text="Delete", command=delete_row , 
+    width= 7)
 boton_delete.place(x=510, y=350)
 #---------------------------------------------------------------
-boton_update = Button(table_table,
-                      justify= "center",
-                      text="Update",
-                      bg="#3B7CC2",
-                      font=('Arial',12,"bold"),
-                      fg ="#FFFFFF",
-                      command=update_row, 
-                      width= 7)
+boton_update = Button(
+    table_table,
+    justify= "center",
+    text="Update",
+    bg="#3B7CC2",
+    font=('Arial',12,"bold"),
+    fg ="#FFFFFF",
+    command=update_row, 
+    width= 7)
 boton_update.place(x=510, y=390) 
 #---------------------------------------------------------------
 #Boton para regresar al menu principal

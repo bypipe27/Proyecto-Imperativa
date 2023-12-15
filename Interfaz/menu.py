@@ -32,10 +32,10 @@ def close_program():
 
 #--------------------------------------------------------------------------------
 #windowsmenu despues de iniciar sesion 
-windows_menu = Tk()
-windows_menu.geometry("600x500")
-windows_menu.resizable(width=False, height=False)
-windows_menu.title("windowsmenu")
+windowsmenu = Tk()
+windowsmenu.geometry("600x500")
+windowsmenu.resizable(width=False, height=False)
+windowsmenu.title("windowsmenu")
 #-------------------------------------------------------------------------------------------------
  # Bandera italiana con labels en ventana de menu (Configuracion y ubicacion) 
 greenflag = Label(windowsmenu, bg="#009C45", height=5, width=20)

@@ -31,27 +31,27 @@ wmenu_table.geometry("600x500")
 wmenu_table.configure(bg="#D6D6D6")
 # ---------------------------------------------------------------
 # Bandera italiana con labels (Configuracion y ubicacion)
-greenflag = Label(wmenu_table,bg = "#009C45" ,height = 5 , width = 20)
-whiteflag=  Label(wmenu_table,bg = "#FFFFFF", height = 5 , width = 21)
-redflag = Label(wmenu_table,bg = "#B31200", height = 5 , width = 20)
-greenflag.place( x = 70, y = 100)
-whiteflag.place( x = 217, y = 100)
-redflag.place( x = 370, y = 100)
+greenflag = Label(wmenu_table,bg="#009C45" , height=5 , width=20)
+whiteflag=  Label(wmenu_table,bg="#FFFFFF", height=5 , width=21)
+redflag = Label(wmenu_table,bg="#B31200", height=5 , width=20)
+greenflag.place(x=70, y=100)
+whiteflag.place(x=217, y=100)
+redflag.place(x=370, y=100)
 # ---------------------------------------------------------------
 # tittle and subtitles en el table_menu
 menu_dish_title = Label(
     wmenu_table, 
-    text = "Italian Restaurant", 
-    font = ("Arial", 36 , "bold"),
-    fg = "#DE0A0D",
+    text="Italian Restaurant", 
+    font=("Arial", 36 , "bold"),
+    fg="#DE0A0D",
     bg="#D6D6D6"
 )
-menu_dish_title.place(x=100 , y=10)
+menu_dish_title.place(x=100, y=10)
 # ---------------------------------------------------------------
 menu_dish_subtitle = Label(
     wmenu_table, 
     text="Management Order", 
-    font=("Arial", 20, "bold"),
+    font=("Arial",20,"bold"),
     bg="#D6D6D6"
 )
 menu_dish_subtitle.place(x=185, y=190)
@@ -59,10 +59,10 @@ menu_dish_subtitle.place(x=185, y=190)
 #butoons add , decla , update of table
 button_add_table = Button(
     wmenu_table,
-    text = "Add Table", 
-    font = ("Arial", 12, "bold"), 
-    fg = "#FFFFFF", 
-    bg = "#29A873",
+    text="Add Table", 
+    font=("Arial", 12, "bold"), 
+    fg="#FFFFFF", 
+    bg="#29A873",
     width=12,  
     command = open_manegetable
 )

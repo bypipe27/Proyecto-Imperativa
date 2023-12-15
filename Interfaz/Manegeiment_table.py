@@ -90,18 +90,20 @@ redflag.place(x=370, y=100)
 #---------------------------------------------------------------
 # title and text description (Configuracion y ubicacion)
 manegement_title = Label(wmanege_table, 
-                         text="Italian Restaurant", 
-                         font=("Arial", 40 , "bold"), 
-                         bg="#D6D6D6", 
-                         fg="#B31200", 
+    text="Italian Restaurant", 
+    font=("Arial", 40 , "bold"), 
+    bg="#D6D6D6", 
+    fg="#B31200", 
 )
 manegement_title.place(x=70, y=20) 
 #---------------------------------------------------------------
 # label and entry of number the table (Configuracion y ubicacion)
-table_table_label = Label(wmanege_table, 
-                          text="# Table", 
-                          font=("Arial", 14, "bold"), 
-                          bg="#D6D6D6")
+table_table_label = Label(
+    wmanege_table, 
+    text="# Table", 
+    font=("Arial", 14, "bold"), 
+    bg="#D6D6D6"
+)
 table_table_label.place(x=70, y=200)
 #Definimos las options 
 options = [" ","1","2","3","4","5","6","7","8","9","10"] 
@@ -111,10 +113,11 @@ combo_table_table.current(0)
 combo_table_table.place(x=70, y=230)
 #---------------------------------------------------------------
 # label and entry date table (Configuracion y ubicacion) 
-date_table_label = Label(wmanege_table, 
-                         text="Date", 
-                         font=("Arial", 14, "bold"), 
-                         bg="#D6D6D6",
+date_table_label = Label(
+    wmanege_table, 
+    text="Date", 
+    font=("Arial", 14, "bold"), 
+    bg="#D6D6D6",
 )
 date_table_label.place(x=70, y=280)
 # entry date 
@@ -155,7 +158,8 @@ add_dish = Button(
     font=("arial", 12, "bold"), 
     bg="#29A873", 
     fg="#FFFFFF", 
-    command=add_dish_to_table)
+    command=add_dish_to_table
+)
 add_dish.place(x=240, y=400)
 #---------------------------------------------------------------
 wmanege_table.mainloop()

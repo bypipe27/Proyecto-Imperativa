@@ -62,31 +62,31 @@ redflag.place( x=370, y=100)
 #----------------------------------------------------------------
 # title  (Configuracion y ubicacion) en ventana de login 
 logintitle = Label(windowslogin, 
-                   text= "Italian Restaurant", 
-                   font= ("Arial", 40, "bold"), 
-                   bg= "#D6D6D6", 
-                   fg= "#DE0A0D"
+    text= "Italian Restaurant", 
+    font= ("Arial", 40, "bold"), 
+    bg= "#D6D6D6", 
+    fg= "#DE0A0D"
 )
 logintitle.place(x=70, y=20)
 #----------------------------------------------------------------
 loginsubtitle = Label(windowslogin,
-                      text= "Login", 
-                      font= ("Arial", 29, "bold"), 
-                      bg= "#D6D6D6"
-                      ) 
+    text= "Login", 
+    font= ("Arial", 29, "bold"), 
+    bg= "#D6D6D6"
+) 
 loginsubtitle.place(x=160, y=190)
 #----------------------------------------------------------------
 #configuramos las etiquetas para el login 
 loginlabelemail = Label(windowslogin, 
-                        text= "Email: ", 
-                        font= ("Arial", 20, "bold"), 
-                        bg= "#D6D6D6")
+    text= "Email: ", 
+    font= ("Arial", 20, "bold"), 
+    bg= "#D6D6D6")
 loginlabelemail.place(x=40, y=245)
 #----------------------------------------------------------------
 loginlabelpassword = Label(windowslogin,  
-                           text= "Password: ", 
-                           font= ("Arial", 20, "bold"), 
-                           bg= "#D6D6D6")
+    text= "Password: ", 
+    font= ("Arial", 20, "bold"), 
+    bg= "#D6D6D6")
 loginlabelpassword.place(x=40, y=305)
 #----------------------------------------------------------------
 # Configuramos entrada de password y email en el login 
@@ -97,31 +97,31 @@ loginentrypassword.place(x=200, y=310)
 #----------------------------------------------------------------
 #Label del  registro
 loginlabelregister = Label(windowslogin, 
-                           text= "¿You don't have an account?", 
-                           font= ("Arial", 12), 
-                           bg= "#D6D6D6")
+    text= "¿You don't have an account?", 
+    font= ("Arial", 12), 
+    bg= "#D6D6D6")
 loginlabelregister.place(x=55, y=415) 
 #----------------------------------------------------------------
 # Configure button de register en el login y ubicamos
 buttonregister = Button(windowslogin, 
-                        width=10, 
-                        text= "Sign up",  
-                        font= ("arial", 14),
-                        fg= "#FFFFFF",
-                        bg= "#3B7CC2", 
-                        relief= "raised", 
-                        command= register)
+    width=10, 
+    text= "Sign up",  
+    font= ("arial", 14),
+    fg= "#FFFFFF",
+    bg= "#3B7CC2", 
+    relief= "raised", 
+    command= register)
 buttonregister.place(x=280, y=410)
 #----------------------------------------------------------------
 # Configure button de login en el login y ubicamos 
 buttonloginsession = Button(windowslogin, 
-                            width= 10, 
-                            text= "Login",  
-                            font= ("arial", 14),
-                            fg= "#FFFFFF",
-                            bg= "#29A873", 
-                            relief= "raised", 
-                            command= verify_email_login)
+    width= 10, 
+    text= "Login",  
+    font= ("arial", 14),
+    fg= "#FFFFFF",
+    bg= "#29A873", 
+    relief= "raised", 
+    command= verify_email_login)
 buttonloginsession.place(x=280, y=360)
 #----------------------------------------------------------------
 # mainloop
