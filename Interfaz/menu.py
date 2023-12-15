@@ -50,7 +50,7 @@ optionsmenutitle = Label(
     windowsmenu, 
     text = "Italian Restaurant", 
     font = ("Arial", 36 , "bold"), 
-    fg = "#B31200"
+    fg = "#DE0A0D"
 )
 optionsmenutitle.place(x = 100 , y = 10)
 #-------------------------------------------------------------------------------------------------
@@ -61,37 +61,45 @@ optionsmenusubtitle.place(x = 240, y = 190 )
 optionsbutondish = Button(
     windowsmenu,
     text="Dish management", 
-    font=("arial", 12), 
+    font=("arial", 12, "bold"), 
     relief="raised",
+    fg="#F9F6FF",
+    bg="#1A9DDE",
     command=open_dish
 )
-optionsbutondish.place(x = 242, y = 240 )
+optionsbutondish.place(x = 232, y = 240 )
 #--------------------------------------------------------------------------------------------------
 #Boton que abre la ventana de menu de mesas 
 optionsbutontable = Button(
     windowsmenu, 
     text = "Table management", 
-    font = ("arial", 12), 
-    relief = "raised", 
+    font = ("arial", 12, "bold"), 
+    relief = "raised",
+    fg="#F9F6FF", 
+    bg="#DEAD1B",
     command= open_table
 ) 
-optionsbutontable.place(x = 240, y = 300 )
+optionsbutontable.place(x = 230, y = 300 )
 #-----------------------------------------------------------------------------------------------------
 #Boton que abre la ventana de menu de pedidos 
 optionsbutondelivery = Button(
     windowsmenu,
     text = "Order management",  
-    font = ("arial", 12), 
-    relief = "raised", 
+    font = ("arial", 12,"bold"), 
+    relief = "raised",
+    fg="#F9F6FF", 
+    bg="#16A340",
     command = open_delivery 
 )
-optionsbutondelivery.place(x = 242 , y = 360 )
+optionsbutondelivery.place(x = 228 , y = 360 )
 #-----------------------------------------------------------------------------------------------------
 #Boton que cierra la ventana de menu
 optionsbutonclose = Button(windowsmenu,
                            text = "Log out", 
-                           font = ("arial", 12), 
+                           font = ("arial", 12, "bold"), 
                            relief = "raised", 
+                           bg="#CC0206",
+                           fg="#F9F6FF",
                            command= close_program )
 optionsbutonclose.place(x = 275 , y = 420 )
 #-------------------------------------------------------------------------------------

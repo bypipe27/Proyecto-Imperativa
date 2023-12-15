@@ -28,8 +28,7 @@ def delete_row():
         for table in tables:
             f.write(json.dumps(table) + '\n') # Sobre escribimos la informacion en el archivo 
 #----------------------------------------------------------------------------- 
-
-#---------------------------------------------------------------            
+         
 # Funcion para actualizar una fila de la tabla 
 def update_row():
     selected = table_or.selection() #Selected row
@@ -40,23 +39,37 @@ def update_row():
     global update_window # la definimos como global para cerrala en la segunda funcion 
     update_window = Toplevel() #New window
     update_window.title("Update Order")
-    update_window.geometry("400x400") 
+    update_window.geometry("300x300") 
     #Definimos unas variables temporales para facilitar la actualizacion 
     numor_u = StringVar()
     numtab_u = StringVar()
     # Create entry fields for each column
-    tittle_u = Label(update_window, text="Update Row", font=("Arial", 20)).pack() #Title 
-    labnum_u = Label(update_window, text="Num Order").pack() #Label 
+    tittle_u = Label(update_window, text="Update Order", font=("Arial", 20)).pack() #Title 
+    labnum_u = Label(update_window, text="Number Order").pack() #Label 
     Entry(update_window, textvariable=numor_u).pack() #Entry 
-    labtab_u = Label(update_window, text="Num tab").pack() #Label
+    labtab_u = Label(update_window, text="Number table").pack() #Label
     Entry(update_window, textvariable=numtab_u).pack() #Entry 
     # Update button in the top windows 
-    Button(update_window, text="Confirm", command=lambda: confirm_update(selected, numor_u, numtab_u)).pack()
+    Button(
+    update_window, 
+    text="Confirm",
+    justify="center",
+    font=("Arial", 12, "bold"),
+    bg="#3B7CC2",
+    fg="#FFFFFF", 
+    command=lambda: confirm_update(selected, numor_u, numtab_u)).pack(pady=10
+    )
 
 def confirm_update(selected, numor_u, numtab_u):
     table_or.item(selected, values=(numor_u.get(), numtab_u.get())) #Update the table 
     update_window.destroy() #Close the window 
 #---------------------------------------------------------------
+# Funcion para regresar al menu principal
+def back_to_menu():
+    table_order.destroy()
+    subprocess.call(["python", "Interfaz\Menu.py"])
+#---------------------------------------------------------------
+# Create window and configure 
 table_order = Tk()
 table_order.title("Table Order")
 table_order.geometry("600x500")
@@ -72,7 +85,7 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #----------------------------------------------------------------
 # tittle and subtitles en el order menu
-menu_order_title = Label(table_order, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
+menu_order_title = Label(table_order, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#DE0A0D")
 menu_order_title.place(x = 100 , y = 10)
 menu_order_subtitle = Label(table_order, text = "Table orders", font = ("Arial", 20, "bold" ))
 menu_order_subtitle.place(x = 185, y = 160)
@@ -116,21 +129,33 @@ table_or.pack()
 
 boton_delete = Button(table_order,
                         justify= "center",
-                        font= ('Arial,',10,"bold"),
+                        font= ('Arial,',12,'bold'),
                         bg="#B31200",
                         fg ="#FFFFFF",
                         text="Delete",
                         command=delete_row,
-                        width= 7)
-boton_delete.place(x=510, y=350)
+                        width= 8)
+boton_delete.place(x=345, y=350)
 
 boton_update = Button(table_order,
                         justify= "center",
                         text="Update",
-                        bg="#009C45",
-                        font=('Arial',10,"bold"),
+                        bg="#3B7CC2",
+                        font=('Arial',12,'bold'),
                         fg ="#FFFFFF",
-                        command=update_row, width= 7)
-boton_update.place(x=510, y=390) 
+                        command=update_row, 
+                        width= 8)
+boton_update.place(x=345, y=390) 
+#---------------------------------------------------------------
+#boton para regresar al menu principal
+button_back = Button(
+    table_order, 
+    text="Back", 
+    font=("Arial", 12, "bold"), 
+    fg="#FFFFFF", 
+    bg="#000000",
+    command=back_to_menu
+)
+button_back.place(x=490, y=435)
 
 table_order.mainloop()

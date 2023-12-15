@@ -1,6 +1,5 @@
 # Importamos las librerias necesarias para el funcionamiento de la ventana 
 from tkinter import *
-from tkinter import messagebox
 import subprocess
 #Funciones 
 def open_manedish():
@@ -29,7 +28,7 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #----------------------------------------------------------------
 # tittle and subtitles en el dishmenu
-menu_dish_title = Label(wmenu_dish, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
+menu_dish_title = Label(wmenu_dish, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#DE0A0D")
 menu_dish_title.place(x = 100 , y = 10)
 menu_dish_subtitle = Label(wmenu_dish, text = "Manegeiment dish", font = ("Arial", 20, "bold" ))
 menu_dish_subtitle.place(x = 185, y = 190)

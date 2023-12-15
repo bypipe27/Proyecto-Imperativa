@@ -44,7 +44,7 @@ def update_row():
     descrip_u = StringVar()
     availability_u = StringVar() 
     # Create entry fields for each column
-    tittle_u = Label(update_window, text="Update Row", font=("Arial", 20)).pack() #Title 
+    tittle_u = Label(update_window, text="Update Dish", font=("Arial", 20)).pack() #Title 
     labname_u = Label(update_window, text="Name").pack() #Label 
     Entry(update_window, textvariable=name_u).pack() #Entry 
     labprice_u = Label(update_window, text="Price").pack() #Label
@@ -57,12 +57,23 @@ def update_row():
     Combobox(update_window, values = options, state= "readonly" ,textvariable= availability_u).pack() #Entry 
     
     # Update button in the top windows 
-    Button(update_window, text="Confirm", command=lambda: confirm_update(selected, name_u, price_u, descrip_u, availability_u)).pack()
+    Button(
+        update_window,
+        justify="center",
+        text="Confirm",
+        font=("Arial", 12, "bold"),
+        bg="#3B7CC2",
+        fg="#FFFFFF",  
+        command=lambda: confirm_update(selected, name_u, price_u, descrip_u, availability_u)).pack(pady=10)
 
 def confirm_update(selected, name_u, price_u, descrip_u, availability_u):
     table_di.item(selected, values=(name_u.get(), price_u.get(), descrip_u.get(), availability_u.get()))
     update_window.destroy() #Close the window
 #---------------------------------------------------------------
+# Funcion para regresar al menu principal
+def back_to_menu():
+    table_table.destroy()
+    subprocess.call(["python", "Interfaz\menu.py"]) 
 table_table = Tk()
 table_table.title("Managementc Dish")
 table_table.geometry("600x500")
@@ -125,7 +136,7 @@ table_di.pack()
 #---------------------------------------------------------------
 boton_delete = Button(table_table,
                         justify= "center",
-                        font= ('Arial,',10,"bold"),
+                        font= ('Arial,',12,"bold"),
                         bg="#B31200",fg ="#FFFFFF" , 
                         text="Delete", command=delete_row , 
                         width= 7)
@@ -134,11 +145,23 @@ boton_delete.place(x=510, y=350)
 boton_update = Button(table_table,
                       justify= "center",
                       text="Update",
-                      bg="#009C45",
-                      font=('Arial',10,"bold"),
+                      bg="#3B7CC2",
+                      font=('Arial',12,"bold"),
                       fg ="#FFFFFF",
                       command=update_row, 
                       width= 7)
 boton_update.place(x=510, y=390) 
 #---------------------------------------------------------------
+#Boton para regresar al menu principal
+button_back = Button(
+    table_table,
+    justify= "center",
+    text="Back",
+    bg="#63C2AC",
+    font=('Arial',12,"bold"),
+    fg ="#FFFFFF",
+    command=back_to_menu, 
+    width= 7) 
+button_back.place(x=30, y=430) 
+#--------------------------------------------------------------- 
 table_table.mainloop()

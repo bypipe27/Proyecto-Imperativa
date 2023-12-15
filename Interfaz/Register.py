@@ -8,7 +8,7 @@ Grupo - 52
 Docente: Luis German Toro
 """
 
-#importamos librerias
+#importamos librerias 
 from tkinter import *
 from tkinter import messagebox 
 import subprocess
@@ -20,7 +20,7 @@ windowsregister = Tk()
 windowsregister.title ("Register")
 windowsregister.resizable(width = False, height = False)
 windowsregister.geometry("600x500")
-windowsregister.configure(bg = "#FFFFFF")
+windowsregister.configure(bg = "#D6D6D6")
 #--------------------------------------------------------------------------------------------------------------
 #Funcion para verficar el correo
 def verify_email():
@@ -65,30 +65,31 @@ redflag.place( x = 370, y = 100)
 registertitle = Label(windowsregister, 
                       text = "Italian Restaurant",
                       font = ("Arial", 40 , "bold"), 
-                      bg = "#AAAAAA", fg = "red",
-                      relief = "raised")
+                      bg = "#D6D6D6", 
+                      fg = "#DE0A0D"
+)
 registertitle.place(x = 70 , y = 20)
 #--------------------------------------------------------------------------------------------------------------
-registersubtitle = Label(windowsregister,text = "Register", font = ("Arial", 29 , "bold"), bg ="#FFFFFF") 
+registersubtitle = Label(windowsregister,text = "Register", font = ("Arial", 29 , "bold"), bg ="#D6D6D6") 
 registersubtitle.place(x = 120, y = 190)
 #--------------------------------------------------------------------------------------------------------------
 # labels para email, password, confirm password
 registeremailabel = Label(windowsregister, 
                           text = "Email: ", 
                           font = ("arial", 12, "bold"), 
-                          bg ="#FFFFFF" )
+                          bg ="#D6D6D6" )
 registeremailabel.place(x = 100, y = 260)
 #--------------------------------------------------------------------------------------------------------------
 registerpasswordlabel = Label(windowsregister, 
                               text = "Password: ", 
                               font = ("arial", 12, " bold"),
-                              bg = "#FFFFFF")
+                              bg = "#D6D6D6")
 registerpasswordlabel.place(x = 100, y = 320)
 #--------------------------------------------------------------------------------------------------------------                     
 registerconfirmlabel = Label(windowsregister, 
                              text = "Confirm Password: ", 
                              font = ("arial", 12, "bold"), 
-                             bg = "#FFFFFF")
+                             bg = "#D6D6D6")
 registerconfirmlabel.place(x = 100, y = 370)
 #--------------------------------------------------------------------------------------------------------------
 # entrys for email , password , confirm password
@@ -104,7 +105,9 @@ registerentryconfirm.place (x = 270, y = 370)
 # button de registrado y regreso a inciar sesion 
 registerbutton = Button(windowsregister,  
                         text = "Register", 
-                        font = ("arial", 12),  
+                        font = ("arial", 12, "bold"), 
+                        bg="#3B7CC2",
+                        fg="#FFFFFF",
                         relief = "raised",
                         command= verify_email) 
 registerbutton.place (x = 410, y = 410 )

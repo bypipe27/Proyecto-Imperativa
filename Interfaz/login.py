@@ -19,7 +19,7 @@ windowslogin = Tk()
 windowslogin.title("Login")
 windowslogin.resizable(width = False, height = False)
 windowslogin.geometry("600x500")
-windowslogin.configure(bg = "#FFFFFF")
+windowslogin.configure(bg = "#D6D6D6")
 #---------------------------------------------------------------
 # Funcion para verificar el correo y la contraseña 
 def verify_email_login():
@@ -64,27 +64,29 @@ redflag.place( x = 370, y = 100)
 logintitle = Label(windowslogin, 
                    text = "Italian Restaurant", 
                    font = ("Arial", 40 , "bold"), 
-                   bg = "#AAAAAA", fg = "#B31200", 
-                   relief = "raised")
+                   bg = "#D6D6D6", 
+                   fg = "#DE0A0D"
+)
 logintitle.place(x = 70 , y = 20)
 #----------------------------------------------------------------
 loginsubtitle = Label(windowslogin,
                       text = "Login", 
                       font = ("Arial", 29 , "bold"), 
-                      bg = "#FFFFFF") 
+                      bg = "#D6D6D6"
+                      ) 
 loginsubtitle.place(x = 160, y = 190)
 #----------------------------------------------------------------
 #configuramos las etiquetas para el login 
 loginlabelemail = Label(windowslogin, 
                         text = "Email: ", 
                         font = ("Arial", 20 , "bold"), 
-                        bg = "#FFFFFF")
+                        bg = "#D6D6D6")
 loginlabelemail.place(x = 40 , y = 245)
 #----------------------------------------------------------------
 loginlabelpassword = Label(windowslogin,  
                            text = "Password: ", 
                            font = ("Arial", 20 , "bold"), 
-                           bg = "#FFFFFF")
+                           bg = "#D6D6D6")
 loginlabelpassword.place(x = 40 , y = 305)
 #----------------------------------------------------------------
 # Configuramos entrada de password y email en el login 
@@ -93,31 +95,34 @@ loginentryuser.place(x = 200 , y = 250)
 loginentrypassword = Entry(windowslogin, width = 26,  font = ("arial", 16), show="•")
 loginentrypassword.place(x = 200, y = 310)
 #----------------------------------------------------------------
-# Configure button de login en el login y ubicamos 
-buttonloginsession = Button(windowslogin, width = 15, 
-                            text = "Login",  
-                            font = ("arial", 14),
-                            fg = "#FFFFFF",
-                            bg = "#000000", 
-                            relief = "solid", 
-                            command= verify_email_login)
-buttonloginsession.place(x = 280, y = 360)
-#----------------------------------------------------------------
 #Label del  registro
 loginlabelregister = Label(windowslogin, 
                            text = "¿You don't have an account?", 
                            font = ("Arial", 12), 
-                           bg = "#FFFFFF")
+                           bg = "#D6D6D6")
 loginlabelregister.place(x = 55, y = 415) 
 #----------------------------------------------------------------
 # Configure button de register en el login y ubicamos
-buttonregister = Button(windowslogin, width = 15, 
+buttonregister = Button(windowslogin, 
+                        width = 10, 
                         text = "Sign up",  
                         font = ("arial", 14),
-                        fg = "#FFFFFF",bg = "#000000", 
-                        relief = "solid", 
+                        fg = "#FFFFFF",
+                        bg = "#3B7CC2", 
+                        relief = "raised", 
                         command = register)
 buttonregister.place(x = 280, y = 410)
+#----------------------------------------------------------------
+# Configure button de login en el login y ubicamos 
+buttonloginsession = Button(windowslogin, 
+                            width = 10, 
+                            text = "Login",  
+                            font = ("arial", 14),
+                            fg = "#FFFFFF",
+                            bg = "#29A873", 
+                            relief = "raised", 
+                            command= verify_email_login)
+buttonloginsession.place(x = 280, y = 360)
 #----------------------------------------------------------------
 # mainloop
 windowslogin.mainloop()

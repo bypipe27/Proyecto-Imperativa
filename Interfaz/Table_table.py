@@ -60,6 +60,11 @@ def update_row():
 def confirm_update(selected, table_u, date_u, hour_u, people_u):
     table_t.item(selected, values=(table_u.get(), date_u.get(), hour_u.get(), people_u.get()))
     update_window.destroy() #Close the window
+#-----------------------------------------------------------------------------
+#Funcion para regresar al menu principal
+def back_to_menu():
+    table_table.destroy()
+    subprocess.call(["python", "Interfaz\menu.py"])
 #---------------------------------------------------------------
 table_table = Tk()
 table_table.title("Manage table")
@@ -76,7 +81,7 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 #----------------------------------------------------------------
 # tittle and subtitles en el dishmenu
-menudishtitle = Label(table_table, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
+menudishtitle = Label(table_table, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#DE0A0D")
 menudishtitle.place(x = 100 , y = 10)
 menudishsubtitle = Label(table_table, text = "Manegeiment Table", font = ("Arial", 20, "bold" ))
 menudishsubtitle.place(x = 185, y = 160)
@@ -124,24 +129,40 @@ for key, record in tables.items():
 #Pack table
 table_t.pack() 
 
-boton_eliminar = Button(table_table,
-                        justify= "center",
-                        font= ('Arial,',10,"bold"),
-                        bg="#B31200",
-                        fg ="#FFFFFF",
-                        text="Delete", 
-                        command= delete_row,
-                        width= 7)
+boton_eliminar = Button(
+    table_table,
+    justify= "center",
+    font= ('Arial,',12,"bold"),
+    bg="#DE0A0D",
+    fg ="#FFFFFF",
+    text="Delete", 
+    command= delete_row,
+    width= 7
+                        )
 boton_eliminar.place(x=510, y=350)
 
-boton_actualizar = Button(table_table,
-                        justify= "center",
-                        text="Update",
-                        bg="#009C45",
-                        font=('Arial',10,"bold"),
-                        fg ="#FFFFFF",
-                        command=update_row,
-                        width= 7)
+boton_actualizar = Button(
+    table_table,
+    justify= "center",
+    text="Update",
+    bg="#009C45",
+    font=('Arial',12,"bold"),
+    fg ="#FFFFFF",
+    command=update_row,
+    width= 7
+)
 boton_actualizar.place(x=510, y=390) 
 #---------------------------------------------------------------
+#Boton para regresar al menu principal 
+boton_back = Button(
+    table_table,
+    justify= "center",
+    text="Back",
+    bg="#3B7CC2",
+    font=('Arial',12,"bold"),
+    fg ="#FFFFFF",
+    command=back_to_menu,
+    width= 7
+)
+boton_back.place(x=26, y=430) 
 table_table.mainloop()

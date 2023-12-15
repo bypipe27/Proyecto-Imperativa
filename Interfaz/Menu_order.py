@@ -37,9 +37,19 @@ whiteflag.place( x = 217, y = 100)
 redflag.place( x = 370, y = 100)
 # ----------------------------------------------------------------
 # tittle and subtitles en el order_menu
-menu_order_title = Label(wmenu_order, text = "Italian Restaurant", font = ("Arial", 36 , "bold"), fg = "#B31200")
+menu_order_title = Label(
+    wmenu_order, 
+    text = "Italian Restaurant", 
+    font = ("Arial", 36 , "bold"), 
+    fg = "#DE0A0D"
+)
 menu_order_title.place(x = 100 , y = 10)
-menu_order_subtitle = Label(wmenu_order, text = "Manegeiment order", font = ("Arial", 20, "bold" ))
+# ---------------------------------------------------------------
+menu_order_subtitle = Label(
+    wmenu_order, 
+    text = "Manegeiment order", 
+    font = ("Arial", 20, "bold" )
+)
 menu_order_subtitle.place(x = 185, y = 190)
 # ---------------------------------------------------------------
 #butoons add , decla , update of order
@@ -49,21 +59,28 @@ button_add_order = Button(
     font = ("Arial", 12, "bold"), 
     fg = "#FFFFFF", 
     bg = "#000000", 
-    command = open_manegeorder)
+    command = open_manegeorder
+)
 button_add_order.place(x = 250, y = 260 )
 #---------------------------------------------------------------
-button_decla_order = Button(wmenu_order, 
-                            text = "Eliminar order", 
-                            font = ("Arial", 12, "bold"),
-                            fg = "#FFFFFF",
-                            bg = "#000000",
-                            command= open_tableorder)
+button_decla_order = Button(
+    wmenu_order, 
+    text="Eliminar order", 
+    font=("Arial", 12, "bold"),
+    fg="#FFFFFF",
+    bg="#000000",
+    command=open_tableorder
+)
 button_decla_order.place(x = 245 , y = 330 )
-button_update_order = Button(wmenu_order,
-                            text = "Actualizar order",
-                            font = ("Arial", 12, "bold"), 
-                            fg = "#FFFFFF", 
-                            bg = "#000000",
-                            command= open_tableorder)
-button_update_order.place(x = 240, y = 390 )
+#--------------------------------------------------------------- 
+button_update_order = Button(
+    wmenu_order,
+    text="Actualizar order",
+    font=("Arial", 12, "bold"), 
+    fg="#FFFFFF", 
+    bg="#000000",
+    command=open_tableorder
+)
+button_update_order.place(x=240, y=390 )
+#---------------------------------------------------------------
 wmenu_order.mainloop()
